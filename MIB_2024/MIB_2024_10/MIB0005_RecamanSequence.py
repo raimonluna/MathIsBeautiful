@@ -12,7 +12,7 @@ rotate = np.array([[np.cos(angle), -np.sin(angle)], [np.sin(angle), np.cos(angle
 recaman = [0]
 for n in range(1, total_terms):
     an   = recaman[-1]
-    sign = 2 * ((an - n in recaman) or (an < n)) - 1
+    sign = 2 * (((an - n) in recaman) or (an < n)) - 1
     next = an + sign * n
     recaman.append(next)
 
