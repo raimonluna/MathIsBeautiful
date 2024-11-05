@@ -12,7 +12,7 @@ def factors(n):
     k = 2
     while n > 1:
         if n % k == 0:
-            n /= k
+            n //= k
             facts.append(k)
         else:
             k += 1
