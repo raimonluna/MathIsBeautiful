@@ -1,0 +1,111 @@
+=================================================================
+
+Hi there! Welcome to my mathematical Instagram channel, where I will be posting visual representations of my favorite mathematical concepts. Not only that, I will also provide links to the source code for each of them so you can generate them yourself!
+
+I guess it's impossible to start a series of mathematical pictures with anything but the Mandelbrot set. Sometimes called the most complex object in mathematics, this fractal was first drawn in 1978 by Robert W. Brooks and Peter Matelski.
+
+The image depicts on the complex plane the number of iterations of the map z ---> z^2 + c that it takes for z to reach a magnitude threshold. For values of c in the yellow central region, the Mandelbrot set itself, the value of z never diverges under this iteration.
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/October2024/MIB0001_MandelbrotSet.py
+
+=================================================================
+
+Here comes a new fractal: the Barnsley fern. I like to think of this as a cool reminder that mathematics is everywhere in nature.
+
+Its parameters are tuned to resemble the proportions of Asplenium adiantum-nigrum, or as we call it in Catalan, la falzia negra. Slight changes of the parameters allow you to mimic all kinds of other ferns.
+
+This structure was published in 1988 in Michael Barnsley's book "Fractals Everywhere". It is gererated by applying over a point four affine transformations, which are iterated randomly with different probabilites.
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_10/MIB0002_BarnsleyFern.py
+
+=================================================================
+
+The Lorenz attractor, perhaps the most famous chaotic system of differential equations, and the origin of the popular concept of butterfly effect. The metaphor may have been inspired by the resemblance of the Lorenz system solutions to a butterfly.
+
+The butterfly effect states that a butterfly flapping its wings in Australia could end up causing a tornado in North America. This is a metaphor to exemplify the chaotic behavior of the atmospheric dynamics, in which small changes in the initial conditions cause very different outcomes.
+
+This system was created in 1963 by Edward Lorenz, Ellen Fetter and Margaret Hamilton as a simplified metheorological model for atmospheric convection. It has the interesting property that tiny variations in the initial conditions result in completely different solutions as time passes.
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_10/MIB0003_LorenzAttractor.py
+
+=================================================================
+
+The Newton-Raphson method is by far the most popular numerical method to find roots of functions. It works by taking an initial guess for the root, and then iteratively taking linear approximations to the function to improve the guess. In general the method converges quadratically to one of the roots.
+
+The initial guess will determine which zero the method will converge to, if any. This fact becomes particularly interesting when used on complex functions. Each of the roots has its own basin of attraction, known as its Fatou set. The boundary of all of the Fatou sets, the Julia set, is actually the same for all of them.
+
+This last property forces this Julia set to become an extremely complicated fractal, known as the Newton fractal. The picture shows the result of Newton's method to the function f(z) = z^3 - 1. The Fatou sets converging to each of the three roots are colored red, green and blue. The brightness corresponds to the number of iterations required to achieve a precision threshold.
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_10/MIB0004_NewtonFractal.py
+
+=================================================================
+
+Recamán's sequence is defined in a very simple way, but it has a strong tendency to produce aesthetically appeling results wherever it is used. It was first described by the Colombian mathematician Bernardo Recamán Santos. The semicircle representation in the picture is a variant of the one created by Edmund Harriss for the excellent YouTube channel Numberphile, in the 2018 video "The Slightly Spooky Recamán Sequence".
+
+Its definition uses a simple recurrence relation. You start with the first term a_0 = 0. To find the nth term, you try to add n to the previous term, and check for the result. If the resulting number is negative, or is already in the sequence, you subtract n instead. If the resulting number is positive and still unused, you take it as the next term. This way, the first terms are 0, 1, 3, 6, 2, 7, 13, 20, 12, 21...
+
+There exists an open problem based on this sequence. Neil Sloane conjectured that every positive integer is a term of this sequence, which has not been proved (or disproved!) yet. Want to give it a try? :-)
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_10/MIB0005_RecamanSequence.py
+
+=================================================================
+
+The bifurcation diagram of the logistic map is a fascinating piece of mathematics that appears in many areas of physics and biology. The map was first described by Edward Lorenz, and it is strongly related with the Mandelbrot set, but its most famous interpretation is due to Robert May, who used it in 1976 as a biological model for population growth of a species.
+
+The logistic map tries to model the change in the population of some species, such as rabbits, from one generation to the next. For small populations, the model predicts an exponential growth with some rate r, due to reproduction. When the population approaches the maximum capacity of the environment, the rate of growth falls back to zero due to starvation. This is written mathematically by the iteration x ---> r * x * (1 - x).
+
+Very rich behavior appears as we vary the rate of growth r. As generations pass, the value of x can fall to zero (species extinction), stabilize at a constant population, oscillate between several population values, or even exhibit chaotic behavior. For r > 3, the system starts oscillating between 2 values, then 4, 8, 16, 32... until we reach the value r ~ 3.56995 and the population becomes chaotic. It remains like this except for some islands of stability.
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_10/MIB0006_LogisticMap.py
+
+=================================================================
+
+This is not the map of Treasure Island! Actually, it's not even an island, it's a really surprising exercise related to the game of chess: The Trapped Knight problem. This problem was invented by one of my many mathematical heroes, Neil Sloane, who explains it very well in the YouTube channel Numberphile. It gave rise to the entry A316667 in his Online Encyclopedia of Integer Sequences.
+
+The idea is to label the squares of a very large chessboard with the natural numbers, following a spiral. We start at the central squere with number 1, then we place number 2 at its right, and continue turning counterclockwise in an outward spiral. Then, we place a chess knight (a horse) in the center, which can jump in the usual way: one quare in one direction, two in the other.
+
+The knight then has to keep jumping, always to the lowest available number, without repeating any square. The figure shows the path of the knight, which will follow the sequence 1, 10, 3, 6, 9, 4, 7, 2... However, the knight gets trapped after 2015 jumps, at the square numbered 2084. There, there are no available squares for the knight to go to, and the sequence ends. In the picture, you can see such square marked with a red cross.
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_10/MIB0007_TrappedKnight.py
+
+=================================================================
+
+In 1952 Alan Turing published his famous paper "The Chemical Basis of Morphogenesis" where he tried to reproduce the formation of visual patterns in nature, such as the skin of many animals, in a purely mathematical way by using equations for chemistry. These partial differential equations are generally known as reaction-diffusion equations, as they model the diffusion of several chemicals as well as the reactions between them.
+
+Surprisingly enough, the reaction-diffusion equations have been found to reproduce a large amount of animal skin patterns such as zebras, leopards, giraffes, corals and fish, to name just a few. Such patterns are now called Turing patterns. In the picture you can see an actual solution of one set of reaction diffusion equations, called the Gray-Scott model, with parameter values that produce a labyrinth pattern often found in some species of fish.
+
+This simulation is particularly interesting for me, as it ran in a couple minutes in a Graphics Processing Unit (GPU). Unlike the standard Central Processing Units (CPU), GPUs have a parallel computing architecture which makes them extremely useful for this kind of computations. For this reason, they are rapidly gaining popularity in high performance computation.
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_10/MIB0008_TuringPatterns.py
+
+=================================================================
+
+The moving sofa problem arises from a very simple question, but it has not been rigorously solved yet. The idea is to find the two-dimensional shape with the largest area that can slide through an L-shaped corridor of unit width. We call it the sofa problem as it is an idealized version of the very real problem of moving furniture across a corner. Such maximal area is known as the sofa constant.
+
+This problem was first mentioned by Leo Moser in 1966, and the first interesting lower bound for the sofa constant was already set two years later by John Hammersley to be pi/2 + 2/pi. Only in 1992, Joseph L. Gerver was able to come up with a better bound, which we believe to be extremely close to the actual sofa constant: 2.21953... However, the exact value is still unknown.
+
+The sofa shown in the picture is particularly interesting to me, as it has actually been found by an artificial neural network. The network is rewarded for increasing the area, while being penalized when the sofa overlaps with the walls. I devised this algorithm for an article on recretional mathematics for the Spanish magazine "Investigación y Ciencia", unfortunately now disappeared.
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_10/MIB0009_MovingSofa.py
+
+=================================================================
+
+According to the fundamental theorem of arithmetic, every integer greater than 1 can be uniquely decomposed as a product of prime numbers. This theorem was already indirectly stated in Euclid's Elements. The picture shows in an intuitive view the prime factorization of the first 49 integers.
+
+As far as I know, this type of visualizations were first created by Brent Yorgey. I like these diagrams as they seem to support the vision of Daniel Tammet, who described prime numbers as "smooth and round shapes, similar to pebbles on a beach" in his book "Born on a Blue Day".
+
+In the case of our picture, prime numbers do appear as simple circles of dots, without any inner complicated structure. As I like the mountains better than the beach, I didn't choose pebbles, but I made them look more like blueberries instead.
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_10/MIB0010_FactorizationDiagram.py
+
+=================================================================
+
+Take any positive integer. If it is even, divide it by two. Otherwise, multiply it by three and add one. Keep repeating this rule over and over to the resulting numbers. For instance, if you start with the number 10, the sequence will be 10, 5, 16, 8, 4, 2, 1, and then you will be stuck in the loop 1, 4, 2, 1, 4, 2, 1... You can try it with other integers, and you will end up the same way.
+
+The Collatz conjecture, formulated by Lothar Collatz in 1937, claims that this sequence will always reach the number one in a finite number of steps, whatever your starting number was. To ths date, the conjecture has not been proven. Instead of trying to prove it, here we focus on a really surprising way of creating organic-looking pictures from it.
+
+To create the visualization on the picture, we follow in reversed order the sequences for the first 50.000 integers. At each step, we take a slight turn to the right or to the left depending on the parity of each element of the sequence. These visualizations for the Collatz conjecture were created by Edmund Harriss and featured in the YouTube channel Numberphile.
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_10/MIB0011_CollatzConjecture.py
+
+=================================================================

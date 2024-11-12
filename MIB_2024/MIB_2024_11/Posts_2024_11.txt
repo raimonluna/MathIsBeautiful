@@ -1,0 +1,50 @@
+=================================================================
+
+Brownian trees can be used to model a huge amount of natural phenomena. Many of them are related to the growth living things such as trees, lichen and neurons. But other similar patterns appear in physical phenomena like mineral cristallization, the freezing of water, or electrical discharges such as lightning and Lichtenberg figures.
+
+These brownian trees are mathematically created through a method called diffusion-limited aggregation, in which a large number of particles move in a random walk through space. Such random walks are often called Brownian motion, as they resemble the trajectories of microscopic particles suspended in a fluid, as observed by Robert Brown in 1827.
+
+We start by placing a seed for the tree, or nucleation center, in the middle of the image. When one of the walkers comes into contact with the tree, it gets stuck to it and stops moving. As more and more particles aggregate to it, the structure acquires its characteristic dendritic structures. Brownian trees were first described by T. A. Witten, Jr. and L. M. Sander in 1981.
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_11/MIB0012_BrownianTree.py
+
+=================================================================
+
+Goldbach's conjecture states that every even positive integer except 2 can be written as the sum of two primes. The conjecture was proposed in 1742 by Christian Goldbach, but remains unproven to this day. This makes it one of the oldest unsolved problems in mathematical history. Its extraordinary difficulty has made it so famous that it appears even in movies: Haven't you watched "La habitación de Fermat" (Fermat's room) yet?
+
+Something that the conjecture does not specify is the number of ways in which each even integer can be expressed as a sum of two primes. For instance, the number 24 can be written as 13 + 11, but also as 17 + 7 or as 19 + 5. Three ways in total. On the other hand, the number 12 can only be decomposed in one way, as 7 + 5.
+
+The picture above is called the Goldbach comet. It shows the number of ways of decomposing each of the first 50.000 even integers into primes. The function is technically called the Goldbach partition function. In this case, the horizontal axis goes from 1 to 100.000, while the vertical axis goes from 1 to 2200.
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_11/MIB0013_GoldbachConjecture.py
+
+=================================================================
+
+The Heighway dragon curve is one of the simplest, yet facinating, fractals. It can be generated from a simple line segment, by iteratively concatenating the curve with a copy of itself rotated 90 degrees. One of its many interesting properties is that it can be used as a tile to cover the plane without leaving any empty space. Also, it is an example of a space-filling curve, which reaches any point of its two-dimensional interior.
+
+There exist many varieties of dragon curves. The one in the picture was discovered by John Heighway in 1966, who investigated it with his colleagues at NASA William Harter and Bruce Banks. In 1967 Martin Gardner featured it in the Scientific American section Mathematical Games. More properties were then revealed by Chandler Davis and Donald Knuth in 1970. This curve is also known as the Jurassic Park dragon, as it appears in the original book by Michael Crichton.
+
+A background of smoke seemed appropriate for the dragon. The smoke in the picture is another example of a fractal, in this case it is fractal Perlin noise. Perlin noise is a randomly generated texture, created by Ken Perlin in 1983. This type of noise is extensively used in computer graphics to produce realistic textures, such as mountains, clouds or even videogame maps. Fractal Perlin noise takes this a step further by adding together several layers of Perlin with increasing frequencies and decreasing amplitudes.
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_11/MIB0014_DragonCurve.py
+
+=================================================================
+
+The Burning Ship fractal is a terrifying relative of the Mandelbrot set, in which we take the absolute values of the real and imaginary parts of complex numbers before squaring them. The iteration we do in this case is z -> (|a| - i|b|)^2 + c, where z = a + ib. It was discovered in 1992 by Michael Michelitsch and Otto E. Rössler. In the image, the real part ranges from -1.8 to -1.7, while the imaginary part goes from -0.015 to 0.085.
+
+In this case, instead of a burning ship, I chose the color map to make it look like a ghost ship... Fans of One Piece will recognise Gecko Moria's face at the bottom right corner of the picture. The colors may also remind you of the fallen city of Minas Morgul, home of the Witch-King of Angmar and his army of Nazgûl. Sweet dreams... :)
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_11/MIB0015_BurningShip.py
+
+=================================================================
+
+Cellular automata are some cool mathematical constructions in which space is divided in a grid of cells, which can be in a number of states (in our case, red, green and blue). The system evolves in finite jumps, or generations, in which all cells are updated from the previous state. The new state of each cell depends only on how its neighboring cells were at the previous generation, according to some simple rule. I guess the most famous example is Conway's Game of Life (coming soon!).
+
+This particular example is called the rock-paper-scissors automaton, inspired by the popular game. Red beats blue, green beats red, and blue beats green. In order for a cell to change color, 3 or more of its closest neighbors must be of the dominant color. Otherwise, the cell remains the same. This produces an alternating pattern in which color fronts take over regions of the plane periodically. As time progresses, the cells tend to organize into stationary spirals separated by flat-front regions.
+
+As usual, cellular automata can be used to model a lot of physical and natural systems. In a way, the great majority of computer simulations are some slight variation of a cellular automaton. From aerodynamics to black holes. In the case of the rock-paper-scissors automaton, the evolution resembles a Belousov–Zhabotinsky chemical reaction, in which several states alternate in a cyclic manner.
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_11/MIB0016_RockPaperScissors.py
+
+=================================================================
+
