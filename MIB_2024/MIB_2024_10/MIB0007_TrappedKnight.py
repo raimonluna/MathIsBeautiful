@@ -8,8 +8,8 @@ side = 81 # Make it odd!
 cmap_board  = mpl.colors.LinearSegmentedColormap.from_list("", [(0.0, 'mediumblue'), (1, 'darkblue')])
 cmap_knight = mpl.colors.LinearSegmentedColormap.from_list("", [(0.0, 'white'), (0.05, 'saddlebrown'), (0.15, 'saddlebrown'),
                                                                 (0.25, 'darkgreen'), (0.6, 'green'), (1, 'orange')])
-x, y  = np.meshgrid(range(side), range(side), indexing='ij')
-board = (x + y) % 2
+x = np.arange(side)[:, None]
+board = (x + x.T) % 2
 
 ###### Prepare the number spiral ######
 spiral = np.zeros((side, side), dtype = np.int64)

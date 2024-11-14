@@ -8,7 +8,8 @@ total_iters  = 100
 xrange       = (-1.8, -1.7)
 yrange       = (-0.015, 0.085)
 
-rec, imc = np.meshgrid(np.linspace(*xrange, shape[0]), np.linspace(*yrange, shape[1]), indexing='ij')
+rec = np.linspace(*xrange, shape[0])[:, None]
+imc = np.linspace(*yrange, shape[1])[None, :]
 c   = rec + 1j * imc
 z   = 0 * c
 burningship = total_iters * np.ones(shape)

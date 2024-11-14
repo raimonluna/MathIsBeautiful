@@ -15,7 +15,8 @@ save_every   = 10
 (a, b)       = (0.037, 0.06)
 
 ###### Prepare the grids
-x, y   = cp.meshgrid(cp.linspace(*xrange, shape[0] + 1)[:-1], cp.linspace(*yrange, shape[1] + 1)[:-1], indexing='ij')
+x = cp.linspace(*xrange, shape[0] + 1)[:-1, None]
+y = cp.linspace(*yrange, shape[1] + 1)[None, :-1]
 dx, dy = x[1, 0] - x[0, 0], y[0, 1] - y[0, 0]
 dt     = CFL * cp.minimum(dx, dy)
 iters  = cp.int64(cp.asnumpy(tmax // dt)) + 1

@@ -12,11 +12,10 @@ is_prime[[0,1]] = False
 for i in range(2, size):
     if is_prime[i]:
         is_prime[2*i::i] = False
-primes = np.arange(size)[is_prime]
+primes = np.arange(size)[is_prime, None]
 
 ##### Do the counting
-a, b = np.meshgrid(primes, primes)
-sums = (a + b)
+sums = primes + primes.T
 sums = np.vstack([sums, np.diag(sums)])
 
 sums = sums[sums <= size]

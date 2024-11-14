@@ -7,7 +7,8 @@ total_iters  = 100
 xrange       = (-2.1, 0.6)
 yrange       = (-1.35, 1.35)
 
-rec, imc = np.meshgrid(np.linspace(*xrange, shape[0]), np.linspace(*yrange, shape[1]), indexing='ij')
+rec = np.linspace(*xrange, shape[0])[:, None]
+imc = np.linspace(*yrange, shape[1])[None, :]
 c   = rec + 1j * imc
 z   = 0 * c
 mandelbrot = total_iters * np.ones(shape)

@@ -7,7 +7,8 @@ total_iters  = 100
 xrange       = (-2, 2)
 yrange       = (-2, 2)
 
-rec, imc = np.meshgrid(np.linspace(*xrange, shape[0]), np.linspace(*yrange, shape[1]), indexing='ij')
+rec = np.linspace(*xrange, shape[0])[:, None]
+imc = np.linspace(*yrange, shape[1])[None, :]
 z   = rec + 1j * imc
 
 iters = - np.ones(shape)

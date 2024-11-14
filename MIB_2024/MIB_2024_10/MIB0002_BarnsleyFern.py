@@ -9,7 +9,6 @@ yrange      = (0, 10.5)
 
 board  = 0.001 * np.ones(shape)
 coords = np.zeros((2, 1))
-x, y   = np.meshgrid(np.linspace(*xrange, shape[0]), np.linspace(*yrange, shape[1]), indexing='ij')
 cmap   = mpl.colors.LinearSegmentedColormap.from_list("", [(0.0, 'lightyellow'), (0.2, 'lime'), (0.85, 'black'), (1, 'black')])
 
 M = np.asarray([[0,	0,	0,	0.16,	0,	0,	0.01],
