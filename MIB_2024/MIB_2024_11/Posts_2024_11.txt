@@ -48,3 +48,19 @@ Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/
 
 =================================================================
 
+When you have a set of points in space, each point has a region which is the closest to it. Drawing the boundaries between such regions gets you the Voronoi diagram of the set. The most famous are the ones in 2 dimensions, such as the one in the picture. You can check that the black lines between each pair of Voronoi cells are the perpendicular bisectors of the segments between points. Obviously, these diagrams and their higher-dimensional versions have a huge number of practical applications, such as finding the closest metro station in your city.
+
+To make it more interesting, in this case we use a color map to plot the difference in distance between the two nearest points, normalized by the largest distance. This provides a continuous variation of values, from 0 at the Voronoi boundaries, to 1 at the reference points. The color map should remind you of the Pride Homunculus, from Fullmetal Alchemist. Look out for him, lurking in the shadows... :)
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_11/MIB0017_VoronoiDiagram.py
+
+=================================================================
+
+
+
+
+
+
+
+
+
