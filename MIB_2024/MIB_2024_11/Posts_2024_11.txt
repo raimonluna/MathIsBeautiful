@@ -56,6 +56,15 @@ Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/
 
 =================================================================
 
+Here goes first attempt at rendering of the Buddhabrot. The definition of the Mandelbrot set focuses on whether the trajectories of points remain bounded or escape to infinity when we iterate the map z --> z^2 + c. Instead, the Buddhabrot is defined as the probability distribution for such trajectories, only for points that eventually escape to infinity. In other words, the distribution of the orbits outside the Mandelbrot set.
+
+This amazing visualization technique was discovered and published by Melinda Green in 1993. The name Buddhabrot was introduced by Lori Gardi, due to its resemblance to Hindu art. In my implementation I used some important ideas from a blog post by Jean-Christophe Loiseau, particularly the use of Sobel filtering to extract the boundary of the Mandelbrot.
+
+The color in the image is based on the number of iterations it takes for the sampled points to escape. Red, green and blue correspond to sequences that took less than 5000, 500 and 50 iterations, respectively. This type of false color technique is sometimes called Nebulabrot, due to its resemblance to the false-color NASA images of nebulae, where each color channel is used for a different frequency range.  
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_11/MIB0018_Buddhabrot.py
+
+=================================================================
 
 
 

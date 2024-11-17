@@ -75,6 +75,6 @@ def update(i):
 
 ax.axis('off')
 animation_fig = animation.FuncAnimation(fig, update, frames = frames + 100, interval = 20)
-animation_fig.save("MIN0008_TuringPatterns.mp4", dpi = 200)
+animation_fig.save("MIB0008_TuringPatterns.mp4", dpi = 200)
 
 print('Animation finished!')
