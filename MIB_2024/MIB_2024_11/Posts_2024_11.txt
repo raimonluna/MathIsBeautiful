@@ -48,7 +48,7 @@ Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/
 
 =================================================================
 
-When you have a set of points in space, each point has a region which is the closest to it. Drawing the boundaries between such regions gets you the Voronoi diagram of the set. The most famous are the ones in 2 dimensions, such as the one in the picture. You can check that the black lines between each pair of Voronoi cells are the perpendicular bisectors of the segments between points. Obviously, these diagrams and their higher-dimensional versions have a huge number of practical applications, such as finding the closest metro station in your city.
+When you have a set of points in space, each point has a region to which it is the closest. Drawing the boundaries between such regions gets you the Voronoi diagram of the set. The most famous are the ones in 2 dimensions, such as the one in the picture. You can check that the black lines between each pair of Voronoi cells are the perpendicular bisectors of the segments between points. Obviously, these diagrams and their higher-dimensional versions have a huge number of practical applications, such as finding the closest metro station in your city.
 
 To make it more interesting, in this case we use a color map to plot the difference in distance between the two nearest points, normalized by the largest distance. This provides a continuous variation of values, from 0 at the Voronoi boundaries, to 1 at the reference points. The color map should remind you of the Pride Homunculus, from Fullmetal Alchemist. Look out for him, lurking in the shadows... :)
 
@@ -66,8 +66,11 @@ Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/
 
 =================================================================
 
+This strange creature is called the Anti-Buddhabrot, it is the complement of the Buddhabrot distribution. In other words, the Anti-Buddhabrot is the distribution for the trajectories of points inside the Mandelbrot set, i.e., those that remain bounded forever. It does not have the same ethereal appearence of the Buddhabrot, but it is more compact-looking. In fact, rendering this one is slightly tricky because the main bulbs of the object require very exhaustive sampling to avoid excessive graininess. Swiping between this post and the previous one you can compare both distributions in different regions of the complex plane.
 
+Similar images were obtained by Linas Vepstas in 1988 and by Noel Griffin in 1993, when studying general trajectories under the Mandelgrot map. However, the proper definition as far as I know comes from Melinda Green, who presented it together with the Buddhabrot. It was also Melinda Green who noticed that iterations on the real line can be quadratically mapped to the logistic map, and produce a bifurcation diagram. Some visualizations actually represent the bifurcation diagram as the Anti-Buddhabrot seen from its side.
 
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_11/MIB0019_AntiBuddhabrot.py
 
 
 

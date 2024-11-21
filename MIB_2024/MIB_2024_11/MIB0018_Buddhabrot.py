@@ -24,7 +24,7 @@ def mandelbrot(c, max_iter, max_radius):
         z = z**2 + c
         diverged = diverged | (np.abs(z) > max_radius)
         z[diverged] = 0
-    return diverged
+    return ~diverged
 
 def new_batch(edges, size, dr, di):
     batch_ind = np.random.randint(0, len(edges), size = size)
@@ -32,7 +32,7 @@ def new_batch(edges, size, dr, di):
     rand_imag = np.random.uniform(-di/2, di/2,   size = size)
     return edges[batch_ind] + rand_real + 1j * rand_imag
 
-def add_to_hist(histogram, successful, channel):
+def add_to_hist(histogram, history, successful, channel):
     to_plot = history[successful, :].ravel()
     idx1    = np.int32( shape[0] * (to_plot.real - xrange[0]) / (xrange[1] - xrange[0]) )
     idx2    = np.int32( shape[1] * (to_plot.imag - yrange[0]) / (yrange[1] - yrange[0]) )
@@ -72,7 +72,7 @@ for channel in range(3):
         lived_long = survival >= buddha_lifes[channel]
         discarded  = successful | lived_long    
     
-        add_to_hist(histogram, successful, channel)
+        add_to_hist(histogram, history, successful, channel)
     
         buddha_z[discarded] = survival[discarded] = 0
         history[discarded, :] = 10
