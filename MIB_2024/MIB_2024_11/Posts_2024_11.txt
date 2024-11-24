@@ -72,6 +72,33 @@ Similar images were obtained by Linas Vepstas in 1988 and by Noel Griffin in 199
 
 Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_11/MIB0019_AntiBuddhabrot.py
 
+=================================================================
+
+By popular request, here goes Conway's Game of Life! This is by far the most popular cellular automaton ever created. In a two-dimensional grid, cells can exist in only two states: live or dead. Typically, live cells are shown white and dead cells are black, even though other configurations are also common. In our animation, I am painting live cells yellow, and I use a color map to indicate the number of live neighbors of dead cells. Cells with no live neighbors whatsoever are painted black.
+
+The evolution for this automaton is very simple: Live cells remain alive in the next generation if and only if the number of live neighbors is 2 or 3. Otherwise, they die, either by underpopulation or overpopulation. Dead cells can only become alive if they have exactly 3 live neighbors, which is often called reproduction. 
+
+The great mathematician John Horton Conway created the game in 1970. It was published that same year in Martin Gardner's "Mathematical Games" section of Scientific American. There, Conway conjectured that the population would always be bounded for any given initial state. This conjecture was disproved by Bill Gosper's team at MIT, who presented Gosper's glider gun, a configuration that cyclically produces gliders indefinitely. Four of these structures can be found in the animation above.
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_11/MIB0020_GameOfLife.py
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

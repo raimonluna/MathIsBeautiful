@@ -28,4 +28,4 @@ for k in range(size):
 
 ax.axis('off')
 animation_fig = animation.FuncAnimation(fig, lambda i: ish.set_data(255*saved[...,i]), frames = frames, interval = 50)
-animation_fig.save("MIN0016_RockPaperScissors.mp4", dpi = 200)
+animation_fig.save("MIB0016_RockPaperScissors.mp4", dpi = 200)
