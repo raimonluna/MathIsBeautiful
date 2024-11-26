@@ -82,7 +82,15 @@ The great mathematician John Horton Conway created the game in 1970. It was publ
 
 Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_11/MIB0020_GameOfLife.py
 
+=================================================================
 
+The Scramble Squares is a surprisingly difficult puzzle where 9 square pieces have to be arranged in such a way that their adjacent edges match. There are four possible pictures, with two different halfs each. Each edge of the puzzle pieces has one particular half of a particular image. You can find versions of it with animals, airplanes, planets...
+
+The pieces can be placed in 9! x 4^9 different ways, which gives the absolutely ridiculous number of 95.126.814.720 possible combinations. However, if the game is built correctly, only one solution exists! This post comes after some friends and me were betting on whether a computer algorithm would be able to solve it in a reasonable time. Obviously, trying every possible combination is way out of the question.
+
+However, the problem turned out to be solvable by depth search using a programming technique known as backtracking. This algorithm explores the decision tree of different piece positions. Since we cannot possibly explore the whole tree, we have to prune it! This means abandoning all branches that have already been proved to lead nowhere. This reduces the number of explored nodes down to 154. The puzzle is therefore solved in about 5 millisecons.  
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_11/MIB0021_ScrambleSquares.py
 
 
 
