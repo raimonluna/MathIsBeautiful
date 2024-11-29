@@ -128,5 +128,5 @@ def animate(i):
     return fig
 
 animation_fig = animation.FuncAnimation(fig, animate, frames = len(params), interval = 10)
-animation_fig.save("MIN0009_MovingSofa.mp4", dpi = 200)
+animation_fig.save("MIB0009_MovingSofa.mp4", dpi = 200)
 

@@ -92,6 +92,19 @@ However, the problem turned out to be solvable by depth search using a programmi
 
 Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_11/MIB0021_ScrambleSquares.py
 
+=================================================================
+
+Have you ever noticed the strange heart shape that appears on the surface of coffee in a mug? This shape is produced by the light rays coming from one point point of the mug wall. As they reflect on the walls, the rays span a family of curves in space. All of these lines happen to be tangent to the heart curve, which acts as the envelope for the whole family.
+
+In the particular case of light rays, envelopes are usually known as caustics. The name comes from the fact that a sufficient concentration of light can cause burning, especially at cusp singularities. The heart-shaped caustic curve created in a coffee mug is actually a cardioid, which has one of such cusp singularities.
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_11/MIB0022_MugCardioid.py
+
+
+
+
+
+
 
 
 

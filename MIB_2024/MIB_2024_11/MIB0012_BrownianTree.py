@@ -60,6 +60,6 @@ def update(i):
 
 ax.axis('off')
 animation_fig = animation.FuncAnimation(fig, update, frames = frames + 100, interval = 50)
-animation_fig.save("MIN0012_BrownianTree.mp4", dpi = 200)
+animation_fig.save("MIB0012_BrownianTree.mp4", dpi = 200)
 
 print('Animation finished!')
