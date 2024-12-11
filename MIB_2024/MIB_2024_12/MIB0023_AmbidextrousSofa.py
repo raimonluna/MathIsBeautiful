@@ -79,6 +79,7 @@ for epoch in tqdm(range(train_epochs)):
         u =   x[:, 0] * torch.cos(theta) + x[:, 1] * torch.sin(theta)
         v = - x[:, 0] * torch.sin(theta) + x[:, 1] * torch.cos(theta)
         overlap += torch.sum(relu(torch.max(u) - 1.0 - u) * relu(torch.max(v) - 1.0 - v)) / random_angles
+        overlap += torch.sum(relu(u - torch.min(u) - 1.0) * relu(v - torch.min(v) - 1.0)) / random_angles 
 
     weight  = learning_rate / scheduler.get_last_lr()[0]
     loss    = 10 * nonunif + weight * (overlap + centering) - area
@@ -86,47 +87,53 @@ for epoch in tqdm(range(train_epochs)):
     loss.backward()
     optimizer.step()
     scheduler.step()
-    
+
 ###### Making the movie
 
 print('Now making the movie. Please wait...')
 x      = sofa(arg).cpu().detach().numpy()
 size   = length.item()
 
-smallsq = np.array([[1, 1], [-1, 1], [-1, -1], [1, -1], [1, 1]])
-largesq = 2 * smallsq
+corridor =  np.array([[1, 0, 0, -size, -size, -size, 1, 1, 1+size, 1+size, 1    ],
+                      [-size, -size, 0, 0, 1, 1, 1, 1-size, 1-size, -size, -size]])
 
 frame_n  = 100
-params_1 = np.vstack([np.zeros(frame_n), (4 - size) * np.linspace(-1, 1, frame_n) / 2 , 1.5*np.ones(frame_n)]).T
-params_2 = np.zeros((2 * frame_n, 3))
-for i, theta in enumerate(np.linspace(0, np.pi/2, 2 * frame_n)):
+params_1 = np.vstack([np.zeros(frame_n), np.linspace(0, 1, frame_n) - size/2, np.ones(frame_n)/2]).T
+
+params_2 = np.zeros((frame_n, 3))
+for i, theta in enumerate(np.linspace(0, np.pi/2, frame_n)):
     u =   x[:, 0] * np.cos(theta) + x[:, 1] * np.sin(theta)
     v = - x[:, 0] * np.sin(theta) + x[:, 1] * np.cos(theta)
-    params_2[i] = [theta, - np.max(u) + 2, - np.max(v) + 2]
-params = np.vstack([params_1, params_2])
-params = np.vstack([np.hstack([params[:, [0]] + th, 
-                               params[:, [1]] * np.cos(th) + params[:, [2]] * np.sin(th), 
-                             - params[:, [1]] * np.sin(th) + params[:, [2]] * np.cos(th)]) for th in np.arange(4) * np.pi/2 ])
+    params_2[i] = [theta, - np.max(u) + 1, - np.max(v) + 1]
+    
+params_3 = np.vstack([np.pi*np.ones(frame_n)/2,  np.ones(frame_n)/2, 1 - size/2 - np.linspace(0, 1, frame_n)]).T
+params_4 = params_2[::-1, :] * np.array([1, -1, -1]) + np.array([0, 1, 1 - size])
+params_5 = params_1 + np.array([0, size, -size])
 
-fig, ax = plt.subplots(frameon=False, figsize = (8, 8))
+params = np.vstack([params_1, params_2, params_3, params_4, params_5])
+params = np.vstack([params, params[::-1, :]])
+    
+fig, ax = plt.subplots(frameon = False, figsize = (8, 8))
 fig.subplots_adjust(left=0, bottom=0, right=1, top=1, wspace=None, hspace=None)
 plt.close()
 
 def animate(i):
     ax.cla()
-    ax.set_facecolor("orange")
+    ax.set_xlim(-2.5, 3.5)
+    ax.set_ylim(-3.5, 2.5)
+    ax.set_facecolor("darkgreen")
     ax.xaxis.set_visible(False)
     ax.yaxis.set_visible(False)
-    ax.fill(*largesq.T, color = 'wheat')
-    ax.plot(*largesq.T, color = 'black')
-    ax.fill(*smallsq.T, color = 'orange')
-    ax.plot(*smallsq.T, color = 'black')
+    ax.fill(*corridor, color = 'limegreen')
+    ax.plot(*corridor, color = 'black')
+    
     theta, du, dv = params[i]
-    u =   x[:, 0] * np.cos(theta) + x[:, 1] * np.sin(theta) + du
-    v = - x[:, 0] * np.sin(theta) + x[:, 1] * np.cos(theta) + dv
-    sofa_plot = ax.fill(u,v, color = 'darkblue')
-    return fig
+    u  =   x[:, 0] * np.cos(theta) + x[:, 1] * np.sin(theta) + du
+    v  = - x[:, 0] * np.sin(theta) + x[:, 1] * np.cos(theta) + dv
+    ax.fill(u,v, color = 'red')
 
-animation_fig = animation.FuncAnimation(fig, animate, frames = len(params), interval = 10)
-animation_fig.save("MIB0009_MovingSofa.mp4", dpi = 200)
+    return fig
+ 
+animation_fig = animation.FuncAnimation(fig, animate, frames = len(params), interval = 20)
+animation_fig.save("MIB0023_AmbidextrousSofa.mp4", dpi = 200)
 

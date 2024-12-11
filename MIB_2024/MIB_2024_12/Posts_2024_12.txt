@@ -1,0 +1,9 @@
+=================================================================
+
+In a post from October 24, I said that the moving sofa problem had not been solved yet. Just as a reminder, the problem concerns the two-dimensional shape with the largest area that can slide through an L-shaped corridor of unit width. Well, now the problem might have been solved in some recent papers by Zhipeng Deng and Jineon Baek, who claim to have proved that Gerver's sofa is indeed optimal. They also claim that the best ambidextrous sofa, also known as Romik's car, is optimal as well.
+
+The ambidextrous sofa follows the same idea as the original sofa problem, but this time we want the sofa to be able to make turns in both directions. That is, it should be able to slide through left and right corners. This obviously constrains the shape further. Dan Romik found a very good shape in 2017, whose area is reduced to 1.64496... and is now believed to be the optimal one. In this case, the sofa looks like a pair of sunglasses. In this post you can see a shape that has been found by a neural network, closely resembling Romik's solution.
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_10/MIB0023_AmbidextrousSofa.py
+
+=================================================================
