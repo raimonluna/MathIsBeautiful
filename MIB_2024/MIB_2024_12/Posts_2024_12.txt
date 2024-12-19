@@ -15,3 +15,14 @@ Some time ago I decided to work on a mathematical generation of its shape, as a 
 Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_12/MIB0024_RomanescoFractal.py
 
 =================================================================
+
+Moiré patterns appear whenever two periodic lattices overlap. They get their name from a type of cloth, but you can see them everywhere: When looking through a double fence on the street, when taking a digital picture of a screen, and of course when two layers of transparent cloth overlap. 
+
+This effect comes from the addition of slightly different frequencies. In image and signal processing, it is called aliasing and is usually a nightmare to deal with. In acoustics, it is known as beating, and appears when two nearby notes sound together.
+
+
+
+
+
+
+
