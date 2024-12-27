@@ -20,7 +20,18 @@ Moiré patterns appear whenever two periodic lattices overlap. They get their na
 
 This effect comes from the addition of slightly different frequencies. In image and signal processing, it is called aliasing and is usually a nightmare to deal with. In acoustics, it is known as beating, and appears when two nearby notes sound together.
 
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_12/MIB0025_MoirePatterns.py
 
+=================================================================
+
+I like to call this one the Balrog Fractal, for obvious reasons. This foe is beyond any of you, run! 
+
+This is yet another variant of the Mandelbrot set, but in this case the iterated function is z --> cos(z) - i/c. Here we inverted the complex plane of c, and we rotated it 90 degrees for it to look more like one of J. R. R. Tolkien's demonic monsters. In the central region of the fractal, z only needs a few iterations to diverge. This is why the balrog has discrete jumps in color, resembling some diabolic flowers.
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_12/MIB0026_BalrogFractal.py
+
+
+=================================================================
 
 
 
