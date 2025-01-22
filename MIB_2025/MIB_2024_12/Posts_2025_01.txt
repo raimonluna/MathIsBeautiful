@@ -1,0 +1,13 @@
+=================================================================
+
+The aerodynamic flow around an airfoil produces a lift force, which makes flying possible. Amazingly enough, the flow displayed in this video has an analytical solution. This is known as the Joukowsky airfoil, and was used by Nikolai Zhukovsky to estimate the lift an drag on an airplane wing in 1910, many decades before computer simulations were possible. Specifically, this is a solution for a two-dimensional incompressible potential flow, and uses a number of beautiful tricks from the theory of complex analysis.
+
+These techniques use the fact that the Cauchy–Riemann condition on holomorphic complex functions implies that both their real and imaginary parts satisfy satisfy Laplace's equation, thus defining a potential flow. This way, we can use a taylor-made combination of such functions in order to impose the boundary conditions that we want. For instance, the flow around a disk can be constructed by adding together a uniform flow, a doublet and a vortex.
+
+Once we have a solution, we can transform it into others by applying other holomorphic functions, which act as conformal maps. In our case, the Joukowsky transform z -> z + 1/z maps the shape of a disk into the airfoil shape in the figure. By using Bernoulli's principle, we can then find the pressure at each point. In the figure, low pressure is painted red and high pressure is blue. As you can see, the pressure above the wing is lower than below, thus producing a lift force.
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_01/MIB0027_JoukowskyAirfoil.py
+
+=================================================================
+
+
