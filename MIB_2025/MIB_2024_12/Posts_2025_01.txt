@@ -10,4 +10,12 @@ Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/
 
 =================================================================
 
+The Hopf fibration is a decomposition of a 3-sphere (a 4-dimensional sphere) into its great circles, one for each point on the 2-sphere (a regular sphere). In other words, each point of the 2-sphere corresponds to a circle, which we call a fiber. This type pf decompositions are called fiber bundles, and are a very important part of differential topology. 
 
+Since the 3-sphere lives in a 4-dimensional world, a good way to visualize it is by performing a stereographic projection of its points onto R3 (regular 3D space). In this way we can choose points on a 2-sphere, in this case lines of constant latitude, and produce cool plots of linked colorful fibers like the one in the picture.
+
+This particular fibration is closely related to the structure of rotations in 3D space, and therefore it has implications for quantum mechanics and particle physics. Also, it is relevant in the theory of quaternions, that are used for computer graphics and robotics, even for the control of quadcopter drones!
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_01/MIB0028_HopfFibration.py
+
+=================================================================
