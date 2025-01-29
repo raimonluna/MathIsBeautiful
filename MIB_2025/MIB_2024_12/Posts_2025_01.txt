@@ -19,3 +19,20 @@ This particular fibration is closely related to the structure of rotations in 3D
 Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_01/MIB0028_HopfFibration.py
 
 =================================================================
+
+The Koch snowflake is a fractal curve introduced in 1904 by Helge von Koch, as a continuous closed curve without any tangent line. It is created from an equilateral triangle, iteratively inserting additional triangles at the center third of each edge. This figure has a finite area but an infinite perimeter. 
+
+You can also calculate its fractal dimension, which turns out to be log(4)/log(3) = 1.26186... This means that its dimension is higher than that of a line, but less than a 2d-surface. It can also be used as a tile, which completely covers the plane.
+
+Here you can see the curve in a Squid Game style. I may have a twisted mind, but this infinitely complicated closed curve reminded me of the dalgona cookie game. In that game the players have to scratch the cookie with a needle to extract the central shape without breaking it. With an infinite perimeter shape, Seong Gi-hun would be completely doomed.
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_01/MIB0029_KochSnowflake.py
+
+=================================================================
+
+
+
+
+
+
+
