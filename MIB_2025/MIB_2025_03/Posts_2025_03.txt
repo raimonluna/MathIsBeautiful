@@ -1,0 +1,15 @@
+=================================================================
+
+The Tower of Hanoi is a mathematical puzzle where a number of disks of decreasing size, with a hole in the middle, are stacked on a pole forming an inverted conical shape. There are three different poles, and the goal of the game is to move the stack of disks to another one of the poles, subject to the following rules:
+
+ - You can only move one disk at a time.
+ - You can only place a disk on top of a smaller disk.
+ 
+The puzzle was invented in 1883 by French mathematician Édouard Lucas. Its solution is quite interesting for mathematicians and programmers alike, as it can be understood in a recursive form. This means that you can solve the puzzle with N disks once you know the solution for N-1 disks. This makes it very easy to program, as in the movie above.The only problem is that the number of moves increases exponentially with the number of disks. Namely, for N disks you need to make 2^N - 1 moves. 
+
+According to a legend, the priests at a temple in Benares are constantly working on a puzzle with 64 disks. The legend says that the world will end when this puzzle is completed. But do not worry, as the number of moves that are required to finish such puzzle are ridiculous. Moving a disk every second, it would take 585.000.000.000 years to complete, 42 times the age of our Universe!
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_03/MIB0030_TowerOfHanoi.py
+
+=================================================================
+
