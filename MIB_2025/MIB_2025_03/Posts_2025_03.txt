@@ -7,9 +7,19 @@ The Tower of Hanoi is a mathematical puzzle where a number of disks of decreasin
  
 The puzzle was invented in 1883 by French mathematician Édouard Lucas. Its solution is quite interesting for mathematicians and programmers alike, as it can be understood in a recursive form. This means that you can solve the puzzle with N disks once you know the solution for N-1 disks. This makes it very easy to program, as in the movie above.The only problem is that the number of moves increases exponentially with the number of disks. Namely, for N disks you need to make 2^N - 1 moves. 
 
-According to a legend, the priests at a temple in Benares are constantly working on a puzzle with 64 disks. The legend says that the world will end when this puzzle is completed. But do not worry, as the number of moves that are required to finish such puzzle are ridiculous. Moving a disk every second, it would take 585.000.000.000 years to complete, 42 times the age of our Universe!
+According to a legend, the priests at a temple in Benares are constantly working on a puzzle with 64 disks. The legend says that the world will end when this puzzle is completed. But do not worry, as the number of moves that are required to finish such puzzle are ridiculous. Moving a disk every second, it would take 584.542.046.091 years to complete, 42 times the age of our Universe!
 
 Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_03/MIB0030_TowerOfHanoi.py
+
+=================================================================
+
+Mathieu's differential equation is a generalization of the harmonic oscillator equation that appears in many physics problems involving oscillations. It was first described by  Émile Léonard Mathieu in 1868, when solving a the frequency spectrum of an elliptical drum. More modern applications include quantum mechanics, electromagnetism and even gravitation. The picture above shows part of its eigenfrequency spectrum.
+
+Much of the knowledge we have about this equation is owed to a major figure in the field of numerical analysis: Gertrude Blanch. After finishing her PhD at Cornell in 1935, Blanch worked as the mathematical director and Chair of the Planning Committee for the Mathematical Tables Project of the Works Progress Administration during World War II.
+
+This institution employed about 450 human computers, used to calculate numerical tables of mathematical functions, and also all kinds of numerical computations for science and technology. In some sense, Mathematical Tables Project was the equivalent at the time of a modern supercomputer. Later on, Gertrude Blanch was one of the first numerical analysts for electronic computers.
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_03/MIB0031_MathieuFunctions.py
 
 =================================================================
 
