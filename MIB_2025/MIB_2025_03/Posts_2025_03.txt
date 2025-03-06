@@ -7,7 +7,7 @@ The Tower of Hanoi is a mathematical puzzle where a number of disks of decreasin
  
 The puzzle was invented in 1883 by French mathematician Édouard Lucas. Its solution is quite interesting for mathematicians and programmers alike, as it can be understood in a recursive form. This means that you can solve the puzzle with N disks once you know the solution for N-1 disks. This makes it very easy to program, as in the movie above.The only problem is that the number of moves increases exponentially with the number of disks. Namely, for N disks you need to make 2^N - 1 moves. 
 
-According to a legend, the priests at a temple in Benares are constantly working on a puzzle with 64 disks. The legend says that the world will end when this puzzle is completed. But do not worry, as the number of moves that are required to finish such puzzle are ridiculous. Moving a disk every second, it would take 584.542.046.091 years to complete, 42 times the age of our Universe!
+According to a legend, the priests at a temple in Benares are constantly working on a puzzle with 64 disks. The legend says that the world will end when this puzzle is completed. But do not worry, as the number of moves that are required to finish such puzzle are ridiculous. Moving a disk every second, it would take 584,542,046,091 years to complete, 42 times the age of our Universe!
 
 Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_03/MIB0030_TowerOfHanoi.py
 
@@ -22,4 +22,16 @@ This institution employed about 450 human computers, used to calculate numerical
 Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_03/MIB0031_MathieuFunctions.py
 
 =================================================================
+
+A Turing machine is an idealized model of a computer. It was introduced in 1936 by Alan Turing, as a theoretical tool to explore the limits of what can be computed in a formal system. A standard Turing machine has an infinitely long tape with symbols on it, typically 0s and 1s, and a head that reads one at a time. At every step, the head reads a symbol on the tape, and applies a particular rule. Based on the rule, it writes a different symbol, moves one step to the left or right, and changes its state to another rule. A rule can also instruct the machine to stop, or halt. 
+
+Deciding whether a Turing machine will eventually halt or not is known as the "halting problem", and is one of the most famous problems in computer science. Of all the possible machines with n states that eventually halt, the one that lasts the longer is called the Busy Beaver. The number of steps that it takes for it to stop is known as BB(n), and its value is extremely difficult to prove. The first four of these numbers are known to be 1, 6, 21 and 107.
+
+BB(5) was very recently found to be 47,176,870, by a collaborative project known as The Busy Beaver Challenge, where amateur mathematicians used computer-assisted proofs. The picture above shows the first 35,000 iterations of the 5-state Busy Beaver winner. Each row of pixels represents one of the iterations. This is quite probably the last Busy Beaver we will ever prove, as BB(6) seems to be so gigantic that no computer is capable of handling it.
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_03/MIB0032_BusyBeaver.py
+
+=================================================================
+
+
 
