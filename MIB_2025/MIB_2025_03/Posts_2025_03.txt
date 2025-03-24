@@ -33,5 +33,13 @@ Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/
 
 =================================================================
 
+Chladni patterns are shapes that form when a little bit of sand is placed on top of a vibrating metal plate. They were first observed by Robert Hooke on glass plates in 1680, and later on described by 1787 by Ernst Chladni by running a violin bow along the edge of a metal plate. As the modes of vibration of the plate get excited, the sand accumulates along the nodal lines and creates mesmerizing figures.
 
+In 1808, Ernst Chladni demonstrated the technique in the Paris Academy of Sciences, which prompted Napoleon Bonaparte to set a prize for the best mathematical explanation of the phenomenon. The contest was finally won in 1816 by the french mathematician Sophie Germain, who first derived the biharmonic differential equation. The picture above shows the first 25 modes of vibration of a plate which is clamped at the edges. Not exactly Chladni's setup, but this one is easier to solve. 
+
+These patterns are found here using spectral methods, as explained in Lloyd N. Trefethen's book. They are extracted from the same biharmonic equation that Sophie Germain derived more than two centuries ago. Notice that the 17th pattern closely resembles the typical Barcelona flower tile, designed by Josep Puig i Cadafalch, which has become a symbol of my city.
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_03/MIB0033_BiharmonicModes.py
+
+=================================================================
 
