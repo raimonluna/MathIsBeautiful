@@ -1,0 +1,12 @@
+=================================================================
+
+The Aragó spot has a really interesting story related to the discovery of the wave theory of light, invloving an important scientist and politician from North Catalonia (now southern France): Domènec Francesc Joan Aragó i Roig. At the beginning of the 19th century, there was a strong debate to decide whether light should be described as a particle or as a wave. Ironically enough, about a century later the quantum theory would end up telling us that light should be described as both. 
+
+In any case, in yet another competition from the French Academy of Sciences, Augustin-Jean Fresnel submitted the wave theory of light. After studying the theory in 1818, Siméon Denis Poisson pointed out that it had to be wrong, as one of its predictions was nonsensical: The theory predicted that a bright spot should appear in the center of the shadow of a circular object. He claimed that this effect of the wave theory was clearly absurd, which proved him right as a supporter of the corpuscular theory of light.
+
+That is, until Francesc Aragó actually performed the experiment and observed the bright spot, thus confirming that light was indeed behaving as a wave. This spot is now known as Aragó spot, Poisson spot, or Fresnel spot. The picture above is a simulation, using the Fast Fourier Transform (FFT), of the shadow of a disk (4 mm in diameter) under the light from a standard red laser pointer (wavelength of 650 nm). You can clearly observe the Aragó spot in the middle of it.
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_04/MIB0034_AragoSpot.py
+
+=================================================================
+
