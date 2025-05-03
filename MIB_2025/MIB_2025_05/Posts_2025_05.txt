@@ -1,0 +1,12 @@
+=================================================================
+
+The Julia sets (and their Fatou sets) are another big family of fractals that I haven't explored much in this channel. They were described by French mathematicians Gaston Julia and Pierre Fatou in 1918, as a starting point for the field of holomorphic dynamics. The fourth publication in this channel, the Newton fractal (MIB0004) is an example of a Fatou/Julia set.
+
+As sets in the complex plane, they are once again related to the good old Mandelbrot, but they are somewhat complementary to it. For the Mandelbrot set, we were looking at the orbits of numbers under the iteration z --> z^2 + c. We initialized z at zero, and checked what happened for each value of c. For this family of Julia sets, we are doing the opposite. We set c to a fixed value, and check what happens for different initial values of z. In this sense, each point on the complex plane gives rise to a different Julia set.
+
+Since we cannot go over all the points on the Mandelbrot fractal, in this video we are moving along a circle, centered at the origin, with radius R = 0.7885. The center of the image becomes dark red whenever c falls inside of the Mandelbrot set.
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_05/MIB0035_JuliaSet.py
+
+=================================================================
+
