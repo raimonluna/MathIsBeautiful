@@ -10,3 +10,12 @@ Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/
 
 =================================================================
 
+You are looking at the face of chaos! The double pendulum is a simple physical system where a pendulum is attached at the end of another pendulum. The motion of the double pendulum is chaotic, which essentially means that it is extremely sensitive to initial conditions. A tiny difference in the initial position will give rise to completely different behavior at later times.
+
+In the picture above, we evolved in time a double pendulum for each pixel, starting from rest at different initial positions. The coordinates in the image correspond to the initial angles for each arm of the pendulum. Then, the color of each pixel represents the time it took for either of the rod to flip over. The black points flipped almost immediately, while the white ones never flipped during the simulation time. 
+
+The differential equations of motion for the double pendulum are not easy to derive, and typically require the use of Lagrangian or Hamiltonian Mechanics. In this case, we focus on the simple case where both rods of the pendulum have the same length and mass. The simulation time is T = 1000 * sqrt(l / g).
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_05/MIB0036_PendulumFractal.py
+
+=================================================================
