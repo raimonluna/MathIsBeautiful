@@ -19,3 +19,11 @@ The differential equations of motion for the double pendulum are not easy to der
 Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_05/MIB0036_PendulumFractal.py
 
 =================================================================
+
+Since the last post had to do with the double pendulum, I thought it was a pity not to show an animation of the actual pendulum. Actually, here I am simulating a collection of 1000 of them, with tiny variations of the initial position. Specifically, the initial angles of the rods have variations up to 2 arcseconds in both directions. Remember that 1 arcsecond is 1/3600 of a degree.At first, all of them follow very close trajectories, so close that we cannot distinguish them on the video. 
+
+However, as the time passes they start separating from each other more and more, until become completely different. This extreme sensitivity to tiny differences in the initial conditions is what we call chaotic behavior. Chaos makes it extremely difficult to predict the future evolution of a system, even if its governing laws are perfectly deterministic. This causes long term weather forecast to be a very challenging problem, for instance.
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_05/MIB0037_DoublePendulum.py
+
+=================================================================
