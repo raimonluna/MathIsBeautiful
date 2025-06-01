@@ -1,0 +1,10 @@
+=================================================================
+
+This maze has been generated using Prim's Algorithm, which is a vey famous method in graph theory to find minimum spanning trees. The algorithm itself was first discovered 1930 by Vojtěch Jarník, but then Robert C. Prim and Edsger W. Dijkstra found it independently, and published it in 1957 and 1959 respectively. For the maze, each of the cells is treated as a vertex of a graph, which can be connected when they are adjacent and there is no wall between them. The tree structure of the graph guarantees that the solution is unique.
+
+The solution of the maze is pretty straightforward if you start from the end, and know the minimum distance of any cell to the maze entrance. You just have to start at the end cell, and take at each step the direction that lowers the distance to the entrance. The minimum distance function is typically not so easy to find, and it usually requires an additional algorithm such as Dijkstra's algorithm. In this case, this distance function (shown as a color map), is already known from the way the maze was built.
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_06/MIB0038_PrimAlgorithm.py
+
+=================================================================
+
