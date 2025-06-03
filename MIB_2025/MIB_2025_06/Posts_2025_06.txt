@@ -8,3 +8,10 @@ Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/
 
 =================================================================
 
+After making the last post, I found out that the distance function for Prim's algorithm looks really cool for very large mazes. For this reason, here I generated a minimum spanning tree for a 200x200 grid, starting from its center. The colormap represents the distance, in number of edges, to the central node. 
+
+As the graph has no closed loops, the trajectories leading to its center split into different branches. Some of them are easier to reach, you could call them shortcuts, and others require more steps to access. This creates an amazing pattern that resembles an explosion, or some portal to another world. They also remind me of the mysterious tunnels that Doctor Who uses to travel with his TARDIS.
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_06/MIB0039_PrimDistance.py
+
+=================================================================
