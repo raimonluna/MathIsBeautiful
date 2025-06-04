@@ -15,3 +15,13 @@ As the graph has no closed loops, the trajectories leading to its center split i
 Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_06/MIB0039_PrimDistance.py
 
 =================================================================
+
+A Fourier series is a really remarkable way of decomposing any periodic function into a combination of trigonometric functions, sines and cosines. In other words, we can use a Fourier series to draw any closed curve by concatenating a large number of spinning circles, each one with a different rotation speed and phase. In the picture we concatenate the red segments, each one turning inside of a yellow circle, in such a way that each segment starts at the tip of the previous one. By rotating 100 of them at once, each with a multiple of the fundamental frequency, we can recreate the picture of an umbrella.
+
+Fourier series were introduced in 1807 by Jean-Baptiste Joseph Fourier in an article about heat conduction in solids. However, their use extends far beyond the study of heat. Actually, they are arguably one of the most important and powerful tools of modern mathematics, physics and engineering. They are widely used in sound and image processing, as well as in the solution of differential equations and other mathematical problems.
+
+A common example of a Fourier series appears when we analyze the sound waves of a single note from a musical instrument. Even though the note has a standard fundamental frequency, say 440 Hz, it will always contain higher harmonics that produce the distinct sound of that particular instrument. The different amplitudes of such harmonics are the terms of the Fourier series of that signal. Thanks to modern computational tools such as the FFT, this type of analysis is routinely used in music software.
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_06/MIB0040_FourierSeries.py
+
+=================================================================
