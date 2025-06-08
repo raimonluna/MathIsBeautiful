@@ -25,3 +25,18 @@ A common example of a Fourier series appears when we analyze the sound waves of 
 Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_06/MIB0040_FourierSeries.py
 
 =================================================================
+
+A Paul trap is a device that can be used to trap charged particles, such as ions. It is often used in experimetal physics, mass spectrometry and as a key component in quantum computing. Paul traps were developed by Wolfgang Paul in the 1950s, for which he shared the Nobel Prize in Physics in 1989. He used to refer to Wolfgang Pauli, another notorious physicist, as his imaginary part.
+
+Earnshaw's theorem states that it is impossible to confine charged particles using static electric fields. These traps, also known as quadripole ion traps, overcome this restriction by introducing oscillating fields, which result in a stable confining effect. The dynamics and stability conditions for ions in oscillating traps can be studied using Mathieu's equation, which already appeared in this channel (MIB0031).
+
+There are several mechanical and magnetical analogs to Paul traps. A very popular example is the rotating saddle, in which a metal ball can be trapped on top of a rotating surface shaped like a horse saddle. In this post we show a simulation of this rotating saddle, with 100 particles. The angular velocity slowly decreases with time, until it goes below the threshold of stability (the last quarter of the video) and the particles disperse. 
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_06/MIB0041_PaulTrap.py
+
+=================================================================
+
+
+
+
+
