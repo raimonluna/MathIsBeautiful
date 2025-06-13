@@ -36,6 +36,16 @@ Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/
 
 =================================================================
 
+The stable fluids algorithm is a method to simulate the flow of an incompressible viscous fluid, like water. This particular method was introduced in 1999 by Jos Stam, and it is widely used in computer graphics as it is quite realistic, computationally very efficient and unconditionally stable. This makes it very useful even for real-time interaction.
+
+The simulation above is a Python adaptation of the code by Felix Köhler for the great YouTube channel Machine Learning & Simulation. The color map shows the vorticity, i.e., the curl of the velocity field, which is a common way of highlighting the small vortices and eddies moving around the fluid.
+
+This method evolves the velocity field by iterating four basic steps: external forcing, advection, diffusion, and divergence removal. The last two steps can be done very efficiently using the Fast Fourier Transform (FFT), as derivatives in Fourier space simply become products by the wavevector k.
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_06/MIB0042_StableFluids.py
+
+=================================================================
+
 
 
 
