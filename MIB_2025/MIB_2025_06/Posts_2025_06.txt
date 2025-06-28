@@ -46,6 +46,16 @@ Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/
 
 =================================================================
 
+This is an einstein tiling, an aperiodic tiling of the plane with a single tile shape. The name has nothing to do with the physicist Albert Einstein, however. Instead, it comes from the actual German meaning of the words "ein Stein", one stone, referring to the fact that there is only one type of tile involved. These shapes form an aperiodic tiling, which means that they cover the plane without leaving any gaps, with a pattern that never repeats itself. This means that it is impossible to shift the pattern and make it match the previous arrangement.
+
+Believe it or not, the first einstein tile (the one in the image) was discovered very recently, in November 2022. It is usually called the hat, or the shirt, and it was first observed by an amateur mathematician, David Smith. He then published a paper together with Joseph Samuel Myers, Craig S. Kaplan and Chaim Goodman-Strauss with two formal proofs of its properties. Before that, several aperiodic tilings were known, but they needed more than one type of tile. The first one, found by Robert Berger in 1964, required 20426 tiles. This number was reduced several times, until Roger Penrose found set of just two tiles. 
+
+This post has probably been the hardest for me to code. The difficulty comes precisely from the fact that there is no periodic way of organizing the tiles. My quick and dirty algorithm uses a set of substitution rules explained in the original paper. With this method, the hats are grouped together into metatiles, and then recursively into larger and larger supertiles that have to be fit together. As I wanted my code to be as self-contained as possible, I managed to do it using only numpy and matplotlib.
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_06/MIB0043_EinsteinTile.py
+
+=================================================================
+
 
 
 
