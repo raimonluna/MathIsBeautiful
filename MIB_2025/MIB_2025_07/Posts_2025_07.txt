@@ -1,0 +1,10 @@
+=================================================================
+
+The Kuramoto-Sivashinsky equation is a fourth order differential equation with very interesting behavior, leading to an organic-looking landscape that resembles a bundle of veins and arteries. It was discovered in the 70s by  Yoshiki Kuramoto and Gregory Sivashinsky in order to model instabilities of a laminar flame front. It has also been studied recently by John C. Baez, Steve Huntsman and Cheyne Weis.
+
+However, its interest goes beyond that of flame front. The solutions have been shown to be chaotic, and their evolution is irreversible in time. It is quite hard to integrate, as it is a stiff differential equation. In this case I used a technique called Exponential Time Differencing, as suggested by Felix Köhler in the YouTube channel Machine Learning & Simulation. These awesome numerical methods were developed by S.M. Cox and P.C. Matthews.
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_07/MIB0044_KuramotoSivashinsky.py
+
+=================================================================
+
