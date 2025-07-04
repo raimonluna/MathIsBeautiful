@@ -18,15 +18,24 @@ D = 1j * point_number * fftfreq(point_number) * (2 * np.pi / domain_length)
 kernel  = np.abs(D) < point_number // 3
 D[point_number//2] = 0
 
-L  = - D**2 - D**4
-eL = np.exp(dt * L)
-eN = np.where(L == 0, dt, (eL - 1) / L)
+L   = - D**2 - D**4
+eL  = np.exp(dt * L)
+eN1 = np.where(L == 0, dt, (eL - 1) / L)
+eN2 = np.where(L == 0, dt / 2, (eL - 1 - L * dt) / (L**2 * dt))
 
-def ETD_step(u):
-    fft_lin = fft(u)
-    fft_non = kernel * D * fft(-0.5 * u**2)
-    return ifft(eL * fft_lin + eN * fft_non).real
+def ETD_step(u0):
+    fft_L0 = fft(u0)
+    fft_N0 = kernel * D * fft(-0.5 * u0**2)
+    return ifft(eL * fft_L0 + eN1 * fft_N0).real
 
+def ETD_RK2_step(u0):
+    fft_L0 = fft(u0)
+    fft_N0 = kernel * D * fft(-0.5 * u0**2)
+    fft_u1 = eL * fft_L0 + eN1 * fft_N0
+    u1     = ifft(fft_u1).real
+    fft_N1 = kernel * D * fft(-0.5 * u1**2)
+    return ifft(fft_u1 + eN2 * (fft_N1 - fft_N0)).real
+    
 for it in range(2*point_number):
     u = ETD_step(u)
     stored[it % point_number, :] = u
