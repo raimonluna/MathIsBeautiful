@@ -8,3 +8,13 @@ Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/
 
 =================================================================
 
+An autostereogram, popularly known as a magic eye picture, is an apparently nonsensical image that encodes a 3D illusion when viewed properly. The proper technique to visualize the 3D shape is called "wall-eyed convergence", and it is achieved by trying to focus both your eyes in an imaginary point behind the image. Can you see it? Let me know in the comments what you see!
+
+The 3D illusion is created by repeating a pattern periodically in the horizontal direction. The period of repetition is chosen to vary depending on the "depth map" of the hidden landsacape. In this way, longer or shorter periods of repetition will correspond to points that appear further or closer to the observer, respectively. 
+
+The first "random dot" autostereogram was hand-drawn by Boris Kompaneysky in 1939, but the modern pictures were created by Tom Baccei and Cheri Smith in 1991. These were commercially distributed with the name of "Magic Eye", and became very popular in the 90s and early 2000s. 
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_07/MIB0045_Autostereogram.py
+
+=================================================================
+
