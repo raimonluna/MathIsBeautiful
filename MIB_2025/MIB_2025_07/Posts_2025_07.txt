@@ -18,3 +18,11 @@ Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/
 
 =================================================================
 
+The Ising model is a very simple model for a ferromagnetic material. A large number of "atoms" is distributed on a lattice, each one with a spin that can point up or down. Neighboring atoms interact by decreasing their energy when their spins are aligned. Even though this is a really simple model, it contains a surprising amount of physical information, including a phase transition. At low temperatures, the spins tend to align in the same direction, producing a net magnetization. However, above some critical temperature, the system becomes disordered and the magnetization drops to zero.
+
+The square lattice Ising model was solved analytically in 1944 by Lars Onsager, in a rather complicated calculation. In this image you can see how the system looks like at the critical temperature, where the two colors correspond to two different spin orientations. Generating this image requires sampling from the Boltzmann distribution, which is quite hard as there are 2^N possible spin combinations. The configuration has been obtained by a variant of the Metropolis-Hastings algorithm, an extremely powerful a Markov chain Monte Carlo (MCMC) method, running on a GPU.
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_07/MIB0046_IsingModel.py
+
+=================================================================
+
