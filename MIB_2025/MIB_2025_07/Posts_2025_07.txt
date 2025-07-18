@@ -26,3 +26,13 @@ Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/
 
 =================================================================
 
+Hyperbolic space is a very particular geometry that has constant negative curvature everywhere. Together with spherical geometries, which have constant positive curvature, hyperbolic geometry is a simple example of a non-Euclidean geometry. These are geometries that do not satisfy Euclid's fifth postulate in its classical form, and have a great importance in modern Mathematics and Physics.
+
+The picture shows a uniform tiling of the Poincaré disk, which results from a conformal compactification of 2-dimensional hyperbolic space. In this model, the entire space is "shrunk" into a disk of unit radius. This type of representations were popularized by the great mathematical artist Dutch artist M. C. Escher, in particular his Circle Limit III (1959).
+
+The Lorentzian version of hyperbolic space, the one containing space and time coordinates, is called anti-de Sitter space and has gained an enormous interest in the field of theoretical physics. In 1997, Juan Maldacena proposed the AdS/CFT correspondence, which relates gravitational theories in anti-de Sitter space to quantum field theories living in its boundary.
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_07/MIB0047_HyperbolicTiling.py
+
+=================================================================
+
