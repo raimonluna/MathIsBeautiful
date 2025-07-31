@@ -36,3 +36,11 @@ Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/
 
 =================================================================
 
+A gyroid is an example of a minimal surface which appears in many biological and chemical structures. More recently, this type of geometry has been used in 3D printing to form lightweight and resistant internal structures. I have to admit that the picture above is not exact but a trigonometric approximation, as finding the actual gyroid surface is quite complicated.
+
+Minimal surfaces are those which locally minimize their area, which means that they have zero mean curvature everywhere. These are the shapes that open soap films, or bubble films, take when stretched by a wire frame. Many other examples of minimal surfaces appear in physics, such as the horizons of black holes.
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_07/MIB0048_Gyroid.py
+
+=================================================================
+
