@@ -1,0 +1,10 @@
+=================================================================
+
+The Penrose triangle... is not a triangle. But it looks like it, from the correct perspective! It is, however, an impossible triangle which cannot exist in 3D space. It was created in 1934 by Oscar Reutersvärd, but it was then rediscovered and published in 1958 by the famous mathematician Roger Penrose, together with his father Lionel Penrose.
+
+As many other strange geometries, it appears in the drawings of M. C. Escher, who was also fascinated by impossible objects. For instance, some similar shapes appear in his work Waterfall (1961). Some real-life sculptures have actually been built, using the same illusion as in the video above. One of them is in East Perth, Australia, and the other in Gotschuchen, Austria. The illusion of the impossible object can only be seen from a very specific direction, of course.
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_08/MIB0049_PenroseTriangle.py
+
+=================================================================
+
