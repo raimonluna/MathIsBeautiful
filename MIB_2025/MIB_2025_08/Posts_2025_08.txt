@@ -8,3 +8,13 @@ Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/
 
 =================================================================
 
+Von Kármán vortex streets are a stream of vortices, or eddies, that are produced when a fluid moves past an obstacle. It is one of the most famous instabilities in fluid dynamics, which produces a characteristic turbulence pattern. It is quite common to find this phenomenon in nature, for instance when a river flows past a round stone. 
+
+The street of vortices can also be observed in clouds when the wind drives them over high mountains. It is also responsible for the howling sound of the wind around wires, poles and chimneys. Actually, many cylindrical chimmneys have some special fins in order to avoid the vibrations from von Kármán vortex streets.
+
+This simulation used a Lattice Boltzmann method, a very interesring algorithm for computational fluid dynamics which models the movement of fictitious particles on a lattice. The code is an adaptation from the one published in a great Medium article by Philip Mocz.
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_08/MIB0050_VonKarman.py
+
+=================================================================
+
