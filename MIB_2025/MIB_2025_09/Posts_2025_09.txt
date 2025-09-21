@@ -1,0 +1,10 @@
+=================================================================
+
+Hofstadter's butterfly is a graph of the quantum energy levels of electrons in a 2D lattice, under a magnetic field. This butterfly shape appears when the magnetic flux per unit cell is a rational multiple of the magnetic flux quantum. Its stunning fractal structure is related to the integer quantum Hall effect and topological quantum numbers.
+
+The butterfly was first plotted by Douglas R. Hofstadter in a research paper in 1976. By analizing the spectrum of Bloch electrons under a magnetic field, he found a recurrence relation known as Harper's equation. He then noticed that the spectrum of such equation largely depended on the rationality or irrationality of its flux parameter. 
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_09/MIB0051_HofstadterButterfly.py
+
+=================================================================
+
