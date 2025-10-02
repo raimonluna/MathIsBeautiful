@@ -2,8 +2,15 @@
 
 *.png
 *.mp4
+*.pdf
 Testing
-Images
+Output
+
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.toc
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

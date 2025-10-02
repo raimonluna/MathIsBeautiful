@@ -1,0 +1,560 @@
+\documentclass[12pt,landscape]{article}
+
+% Geometry and layout
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{parskip} % nicer paragraph spacing
+\usepackage{multicol}
+\usepackage{caption}
+\usepackage{titlesec}
+\usepackage{tocloft}
+\usepackage{hyperref}
+\usepackage{amsfonts}
+
+% Font & style
+\usepackage{palatino} % elegant font
+\renewcommand{\baselinestretch}{1.2}
+
+% TOC formatting (minimalistic look)
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsecfont}{\large}
+\renewcommand{\cftsecpagefont}{\large}
+
+% Section formatting
+\titleformat{\section}{\LARGE\bfseries}{\thesection}{1em}{}
+
+% --- PAGE TEMPLATE ---
+\newcommand{\artpage}[3][]{%
+  \begin{minipage}[t]{0.48\linewidth}
+    \vspace{0pt} % align top
+    \section*{#2} % artwork title
+    \addcontentsline{toc}{section}{#2} % add to TOC
+    #3 % text content
+  \end{minipage}%
+  \hfill
+  \begin{minipage}[t]{0.48\linewidth}
+    \vspace{0pt} % align top
+    \centering
+    \includegraphics[width=\linewidth,height=\linewidth,keepaspectratio]{#1}
+  \end{minipage}%
+  \newpage
+}
+
+% --- DOCUMENT START ---
+\begin{document}
+
+% --- COVER PAGE ---
+\begin{titlepage}
+    \centering
+    \vspace*{3cm}
+    {\Huge\bfseries Math is Beautiful \par}
+    \vspace{1cm}
+    {\LARGE A Journey Through Patterns and Geometry\par}
+    \vspace{2cm}
+    {\Large Raimon Luna\par}
+    \vfill
+    {\Large \today\par}
+\end{titlepage}
+
+% --- TABLE OF CONTENTS ---
+\thispagestyle{empty}
+\begin{center}
+    \vspace*{1cm}
+    {\Huge \bfseries Contents \par}
+\end{center}
+\vspace{1cm}
+\tableofcontents
+\newpage
+
+\artpage[../Output/LowQuality/MIB0001_MandelbrotSet.png]{Mandelbrot Set}{%
+Hi there! Welcome to my mathematical Instagram channel, where I will be posting visual representations of my favorite mathematical concepts. Not only that, I will also provide links to the source code for each of them so you can generate them yourself!\\
+
+I guess it's impossible to start a series of mathematical pictures with anything but the Mandelbrot set. Sometimes called the most complex object in mathematics, this fractal was first drawn in 1978 by Robert W. Brooks and Peter Matelski.\\
+
+The image depicts on the complex plane the number of iterations of the map $z \to z^2 + c$ that it takes for $z$ to reach a magnitude threshold. For values of $c$ in the yellow central region, the Mandelbrot set itself, the value of $z$ never diverges under this iteration.\\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/October2024/MIB0001_MandelbrotSet.py}
+}
+
+\artpage[../Output/LowQuality/MIB0002_BarnsleyFern.png]{Barnsley Fern}{%
+Here comes a new fractal: the Barnsley fern. I like to think of this as a cool reminder that mathematics is everywhere in nature.\\
+
+Its parameters are tuned to resemble the proportions of Asplenium adiantum-nigrum, or as we call it in Catalan, la falzia negra. Slight changes of the parameters allow you to mimic all kinds of other ferns.\\
+
+This structure was published in 1988 in Michael Barnsley's book "Fractals Everywhere". It is gererated by applying over a point four affine transformations, which are iterated randomly with different probabilites.\\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_10/MIB0002_BarnsleyFern.py}
+}
+
+\artpage[../Output/LowQuality/MIB0003_LorenzAttractor.png]{Lorenz Attractor}{%
+The Lorenz attractor, perhaps the most famous chaotic system of differential equations, and the origin of the popular concept of butterfly effect. The metaphor may have been inspired by the resemblance of the Lorenz system solutions to a butterfly.\\
+
+The butterfly effect states that a butterfly flapping its wings in Australia could end up causing a tornado in North America. This is a metaphor to exemplify the chaotic behavior of the atmospheric dynamics, in which small changes in the initial conditions cause very different outcomes.\\
+
+This system was created in 1963 by Edward Lorenz, Ellen Fetter and Margaret Hamilton as a simplified metheorological model for atmospheric convection. It has the interesting property that tiny variations in the initial conditions result in completely different solutions as time passes.\\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_10/MIB0003_LorenzAttractor.py}
+}
+
+\artpage[../Output/LowQuality/MIB0004_NewtonFractal.png]{Newton Fractal}{%
+The Newton-Raphson method is by far the most popular numerical method to find roots of functions. It works by taking an initial guess for the root, and then iteratively taking linear approximations to the function to improve the guess. In general the method converges quadratically to one of the roots.\\
+
+The initial guess will determine which zero the method will converge to, if any. This fact becomes particularly interesting when used on complex functions. Each of the roots has its own basin of attraction, known as its Fatou set. The boundary of all of the Fatou sets, the Julia set, is actually the same for all of them.\\
+
+This last property forces this Julia set to become an extremely complicated fractal, known as the Newton fractal. The picture shows the result of Newton's method to the function $f(z) = z^3 - 1$. The Fatou sets converging to each of the three roots are colored red, green and blue. The brightness corresponds to the number of iterations required to achieve a precision threshold.\\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_10/MIB0004_NewtonFractal.py}
+}
+
+\artpage[../Output/LowQuality/MIB0005_RecamanSequence.png]{Recamán's Sequence}{%
+Recamán's sequence is defined in a very simple way, but it has a strong tendency to produce aesthetically appeling results wherever it is used. It was first described by the Colombian mathematician Bernardo Recamán Santos. The semicircle representation in the picture is a variant of the one created by Edmund Harriss for the excellent YouTube channel Numberphile, in the 2018 video "The Slightly Spooky Recamán Sequence".\\
+
+Its definition uses a simple recurrence relation. You start with the first term $a_0 = 0$. To find the nth term, you try to add n to the previous term, and check for the result. If the resulting number is negative, or is already in the sequence, you subtract n instead. If the resulting number is positive and still unused, you take it as the next term. This way, the first terms are 0, 1, 3, 6, 2, 7, 13, 20, 12, 21...\\
+
+There exists an open problem based on this sequence. Neil Sloane conjectured that every positive integer is a term of this sequence, which has not been proved (or disproved!) yet. Want to give it a try? :-)\\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_10/MIB0005_RecamanSequence.py}
+}
+
+\artpage[../Output/LowQuality/MIB0006_LogisticMap.png]{Logistic Map}{%
+The bifurcation diagram of the logistic map is a fascinating piece of mathematics that appears in many areas of physics and biology. The map was first described by Edward Lorenz, and it is strongly related with the Mandelbrot set, but its most famous interpretation is due to Robert May, who used it in 1976 as a biological model for population growth of a species.\\
+
+The logistic map tries to model the change in the population of some species, such as rabbits, from one generation to the next. For small populations, the model predicts an exponential growth with some rate r, due to reproduction. When the population approaches the maximum capacity of the environment, the rate of growth falls back to zero due to starvation. This is written mathematically by the iteration $x \to r x (1 - x)$.\\
+
+Very rich behavior appears as we vary the rate of growth $r$. As generations pass, the value of $x$ can fall to zero (species extinction), stabilize at a constant population, oscillate between several population values, or even exhibit chaotic behavior. For $r > 3$, the system starts oscillating between 2 values, then 4, 8, 16, 32... until we reach the value $r \sim 3.56995$ and the population becomes chaotic. It remains like this except for some islands of stability.\\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_10/MIB0006_LogisticMap.py}
+}
+
+\artpage[../Output/LowQuality/MIB0007_TrappedKnight.png]{Trapped Knight}{%
+This is not the map of Treasure Island! Actually, it's not even an island, it's a really surprising exercise related to the game of chess: The Trapped Knight problem. This problem was invented by one of my many mathematical heroes, Neil Sloane, who explains it very well in the YouTube channel Numberphile. It gave rise to the entry A316667 in his Online Encyclopedia of Integer Sequences.\\
+
+The idea is to label the squares of a very large chessboard with the natural numbers, following a spiral. We start at the central squere with number 1, then we place number 2 at its right, and continue turning counterclockwise in an outward spiral. Then, we place a chess knight (a horse) in the center, which can jump in the usual way: one quare in one direction, two in the other.\\
+
+The knight then has to keep jumping, always to the lowest available number, without repeating any square. The figure shows the path of the knight, which will follow the sequence 1, 10, 3, 6, 9, 4, 7, 2... However, the knight gets trapped after 2015 jumps, at the square numbered 2084. There, there are no available squares for the knight to go to, and the sequence ends. In the picture, you can see such square marked with a red cross.\\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_10/MIB0007_TrappedKnight.py}
+}
+
+\artpage[../Output/LowQuality/MIB0008_TuringPatterns.png]{Turing Patterns}{%
+In 1952 Alan Turing published his famous paper "The Chemical Basis of Morphogenesis" where he tried to reproduce the formation of visual patterns in nature, such as the skin of many animals, in a purely mathematical way by using equations for chemistry. These partial differential equations are generally known as reaction-diffusion equations, as they model the diffusion of several chemicals as well as the reactions between them.\\
+
+Surprisingly enough, the reaction-diffusion equations have been found to reproduce a large amount of animal skin patterns such as zebras, leopards, giraffes, corals and fish, to name just a few. Such patterns are now called Turing patterns. In the picture you can see an actual solution of one set of reaction diffusion equations, called the Gray-Scott model, with parameter values that produce a labyrinth pattern often found in some species of fish.\\
+
+This simulation is particularly interesting for me, as it ran in a couple minutes in a Graphics Processing Unit (GPU). Unlike the standard Central Processing Units (CPU), GPUs have a parallel computing architecture which makes them extremely useful for this kind of computations. For this reason, they are rapidly gaining popularity in high performance computation.\\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_10/MIB0008_TuringPatterns.py}
+}
+
+\artpage[../Output/LowQuality/MIB0009_MovingSofa.png]{Moving Sofa}{%
+The moving sofa problem arises from a very simple question, but it has not been rigorously solved yet. The idea is to find the two-dimensional shape with the largest area that can slide through an L-shaped corridor of unit width. We call it the sofa problem as it is an idealized version of the very real problem of moving furniture across a corner. Such maximal area is known as the sofa constant.\\
+
+This problem was first mentioned by Leo Moser in 1966, and the first interesting lower bound for the sofa constant was already set two years later by John Hammersley to be $\pi/2 + 2/\pi$. Only in 1992, Joseph L. Gerver was able to come up with a better bound, which we believe to be extremely close to the actual sofa constant: 2.21953... However, the exact value is still unknown.\\
+
+The sofa shown in the picture is particularly interesting to me, as it has actually been found by an artificial neural network. The network is rewarded for increasing the area, while being penalized when the sofa overlaps with the walls. I devised this algorithm for an article on recretional mathematics for the Spanish magazine "Investigación y Ciencia", unfortunately now disappeared.\\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_10/MIB0009_MovingSofa.py}
+}
+
+\artpage[../Output/LowQuality/MIB0010_FactorizationDiagram.png]{Factorization Diagram}{%
+According to the fundamental theorem of arithmetic, every integer greater than 1 can be uniquely decomposed as a product of prime numbers. This theorem was already indirectly stated in Euclid's Elements. The picture shows in an intuitive view the prime factorization of the first 49 integers.\\
+
+As far as I know, this type of visualizations were first created by Brent Yorgey. I like these diagrams as they seem to support the vision of Daniel Tammet, who described prime numbers as "smooth and round shapes, similar to pebbles on a beach" in his book "Born on a Blue Day".\\
+
+In the case of our picture, prime numbers do appear as simple circles of dots, without any inner complicated structure. As I like the mountains better than the beach, I didn't choose pebbles, but I made them look more like blueberries instead.\\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_10/MIB0010_FactorizationDiagram.py}
+}
+
+\artpage[../Output/LowQuality/MIB0011_CollatzConjecture.png]{Collatz Conjecture}{%
+Take any positive integer. If it is even, divide it by two. Otherwise, multiply it by three and add one. Keep repeating this rule over and over to the resulting numbers. For instance, if you start with the number 10, the sequence will be 10, 5, 16, 8, 4, 2, 1, and then you will be stuck in the loop 1, 4, 2, 1, 4, 2, 1... You can try it with other integers, and you will end up the same way.\\
+
+The Collatz conjecture, formulated by Lothar Collatz in 1937, claims that this sequence will always reach the number one in a finite number of steps, whatever your starting number was. To ths date, the conjecture has not been proven. Instead of trying to prove it, here we focus on a really surprising way of creating organic-looking pictures from it.\\
+
+To create the visualization on the picture, we follow in reversed order the sequences for the first 50.000 integers. At each step, we take a slight turn to the right or to the left depending on the parity of each element of the sequence. These visualizations for the Collatz conjecture were created by Edmund Harriss and featured in the YouTube channel Numberphile.\\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_10/MIB0011_CollatzConjecture.py}
+}
+
+\artpage[../Output/LowQuality/MIB0012_BrownianTree.png]{Brownian Tree}{%
+Brownian trees can be used to model a huge amount of natural phenomena. Many of them are related to the growth living things such as trees, lichen and neurons. But other similar patterns appear in physical phenomena like mineral cristallization, the freezing of water, or electrical discharges such as lightning and Lichtenberg figures.\\
+
+These brownian trees are mathematically created through a method called diffusion-limited aggregation, in which a large number of particles move in a random walk through space. Such random walks are often called Brownian motion, as they resemble the trajectories of microscopic particles suspended in a fluid, as observed by Robert Brown in 1827.\\
+
+We start by placing a seed for the tree, or nucleation center, in the middle of the image. When one of the walkers comes into contact with the tree, it gets stuck to it and stops moving. As more and more particles aggregate to it, the structure acquires its characteristic dendritic structures. Brownian trees were first described by T. A. Witten, Jr. and L. M. Sander in 1981.\\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_11/MIB0012_BrownianTree.py}
+}
+
+\artpage[../Output/LowQuality/MIB0013_GoldbachConjecture.png]{Goldbach's Conjecture}{%
+Goldbach's conjecture states that every even positive integer except 2 can be written as the sum of two primes. The conjecture was proposed in 1742 by Christian Goldbach, but remains unproven to this day. This makes it one of the oldest unsolved problems in mathematical history. Its extraordinary difficulty has made it so famous that it appears even in movies: Haven't you watched "La habitación de Fermat" (Fermat's room) yet?\\
+
+Something that the conjecture does not specify is the number of ways in which each even integer can be expressed as a sum of two primes. For instance, the number 24 can be written as 13 + 11, but also as 17 + 7 or as 19 + 5. Three ways in total. On the other hand, the number 12 can only be decomposed in one way, as 7 + 5.\\
+
+The picture above is called the Goldbach comet. It shows the number of ways of decomposing each of the first 50.000 even integers into primes. The function is technically called the Goldbach partition function. In this case, the horizontal axis goes from 1 to 100.000, while the vertical axis goes from 1 to 2200.\\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_11/MIB0013_GoldbachConjecture.py}
+}
+
+\artpage[../Output/LowQuality/MIB0014_DragonCurve.png]{Dragon Curve}{%
+The Heighway dragon curve is one of the simplest, yet facinating, fractals. It can be generated from a simple line segment, by iteratively concatenating the curve with a copy of itself rotated 90 degrees. One of its many interesting properties is that it can be used as a tile to cover the plane without leaving any empty space. Also, it is an example of a space-filling curve, which reaches any point of its two-dimensional interior.\\
+
+There exist many varieties of dragon curves. The one in the picture was discovered by John Heighway in 1966, who investigated it with his colleagues at NASA William Harter and Bruce Banks. In 1967 Martin Gardner featured it in the Scientific American section Mathematical Games. More properties were then revealed by Chandler Davis and Donald Knuth in 1970. This curve is also known as the Jurassic Park dragon, as it appears in the original book by Michael Crichton.\\
+
+A background of smoke seemed appropriate for the dragon. The smoke in the picture is another example of a fractal, in this case it is fractal Perlin noise. Perlin noise is a randomly generated texture, created by Ken Perlin in 1983. This type of noise is extensively used in computer graphics to produce realistic textures, such as mountains, clouds or even videogame maps. Fractal Perlin noise takes this a step further by adding together several layers of Perlin with increasing frequencies and decreasing amplitudes.\\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_11/MIB0014_DragonCurve.py}
+}
+
+\artpage[../Output/LowQuality/MIB0015_BurningShip.png]{Burning Ship}{%
+The Burning Ship fractal is a terrifying relative of the Mandelbrot set, in which we take the absolute values of the real and imaginary parts of complex numbers before squaring them. The iteration we do in this case is $z \to (|a| - i|b|)^2 + c$, where $z = a + ib$. It was discovered in 1992 by Michael Michelitsch and Otto E. Rössler. In the image, the real part ranges from -1.8 to -1.7, while the imaginary part goes from -0.015 to 0.085.\\
+
+In this case, instead of a burning ship, I chose the color map to make it look like a ghost ship... Fans of One Piece will recognise Gecko Moria's face at the bottom right corner of the picture. The colors may also remind you of the fallen city of Minas Morgul, home of the Witch-King of Angmar and his army of Nazgûl. Sweet dreams... :)\\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_11/MIB0015_BurningShip.py}
+}
+
+\artpage[../Output/LowQuality/MIB0016_RockPaperScissors.png]{Rock Paper Scissors}{%
+Cellular automata are some cool mathematical constructions in which space is divided in a grid of cells, which can be in a number of states (in our case, red, green and blue). The system evolves in finite jumps, or generations, in which all cells are updated from the previous state. The new state of each cell depends only on how its neighboring cells were at the previous generation, according to some simple rule. I guess the most famous example is Conway's Game of Life (coming soon!).\\
+
+This particular example is called the rock-paper-scissors automaton, inspired by the popular game. Red beats blue, green beats red, and blue beats green. In order for a cell to change color, 3 or more of its closest neighbors must be of the dominant color. Otherwise, the cell remains the same. This produces an alternating pattern in which color fronts take over regions of the plane periodically. As time progresses, the cells tend to organize into stationary spirals separated by flat-front regions.\\
+
+As usual, cellular automata can be used to model a lot of physical and natural systems. In a way, the great majority of computer simulations are some slight variation of a cellular automaton. From aerodynamics to black holes. In the case of the rock-paper-scissors automaton, the evolution resembles a Belousov–Zhabotinsky chemical reaction, in which several states alternate in a cyclic manner.\\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_11/MIB0016_RockPaperScissors.py}
+}
+
+\artpage[../Output/LowQuality/MIB0017_VoronoiDiagram.png]{Voronoi Diagram}{%
+When you have a set of points in space, each point has a region to which it is the closest. Drawing the boundaries between such regions gets you the Voronoi diagram of the set. The most famous are the ones in 2 dimensions, such as the one in the picture. You can check that the black lines between each pair of Voronoi cells are the perpendicular bisectors of the segments between points. Obviously, these diagrams and their higher-dimensional versions have a huge number of practical applications, such as finding the closest metro station in your city.\\
+
+To make it more interesting, in this case we use a color map to plot the difference in distance between the two nearest points, normalized by the largest distance. This provides a continuous variation of values, from 0 at the Voronoi boundaries, to 1 at the reference points. The color map should remind you of the Pride Homunculus, from Fullmetal Alchemist. Look out for him, lurking in the shadows... :)\\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_11/MIB0017_VoronoiDiagram.py}
+}
+
+\artpage[../Output/LowQuality/MIB0018_Buddhabrot.png]{Buddhabrot}{%
+Here goes first attempt at rendering of the Buddhabrot. The definition of the Mandelbrot set focuses on whether the trajectories of points remain bounded or escape to infinity when we iterate the map $z \to z^2 + c$. Instead, the Buddhabrot is defined as the probability distribution for such trajectories, only for points that eventually escape to infinity. In other words, the distribution of the orbits outside the Mandelbrot set.\\
+
+This amazing visualization technique was discovered and published by Melinda Green in 1993. The name Buddhabrot was introduced by Lori Gardi, due to its resemblance to Hindu art. In my implementation I used some important ideas from a blog post by Jean-Christophe Loiseau, particularly the use of Sobel filtering to extract the boundary of the Mandelbrot.\\
+
+The color in the image is based on the number of iterations it takes for the sampled points to escape. Red, green and blue correspond to sequences that took less than 5000, 500 and 50 iterations, respectively. This type of false color technique is sometimes called Nebulabrot, due to its resemblance to the false-color NASA images of nebulae, where each color channel is used for a different frequency range.  \\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_11/MIB0018_Buddhabrot.py}
+}
+
+\artpage[../Output/LowQuality/MIB0019_AntiBuddhabrot.png]{Anti-Buddhabrot}{%
+This strange creature is called the Anti-Buddhabrot, it is the complement of the Buddhabrot distribution. In other words, the Anti-Buddhabrot is the distribution for the trajectories of points inside the Mandelbrot set, i.e., those that remain bounded forever. It does not have the same ethereal appearence of the Buddhabrot, but it is more compact-looking. In fact, rendering this one is slightly tricky because the main bulbs of the object require very exhaustive sampling to avoid excessive graininess. Swiping between this post and the previous one you can compare both distributions in different regions of the complex plane.\\
+
+Similar images were obtained by Linas Vepstas in 1988 and by Noel Griffin in 1993, when studying general trajectories under the Mandelgrot map. However, the proper definition as far as I know comes from Melinda Green, who presented it together with the Buddhabrot. It was also Melinda Green who noticed that iterations on the real line can be quadratically mapped to the logistic map, and produce a bifurcation diagram. Some visualizations actually represent the bifurcation diagram as the Anti-Buddhabrot seen from its side.\\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_11/MIB0019_AntiBuddhabrot.py}
+}
+
+\artpage[../Output/LowQuality/MIB0020_GameOfLife.png]{Game of Life}{%
+By popular request, here goes Conway's Game of Life! This is by far the most popular cellular automaton ever created. In a two-dimensional grid, cells can exist in only two states: live or dead. Typically, live cells are shown white and dead cells are black, even though other configurations are also common. In our animation, I am painting live cells yellow, and I use a color map to indicate the number of live neighbors of dead cells. Cells with no live neighbors whatsoever are painted black.\\
+
+The evolution for this automaton is very simple: Live cells remain alive in the next generation if and only if the number of live neighbors is 2 or 3. Otherwise, they die, either by underpopulation or overpopulation. Dead cells can only become alive if they have exactly 3 live neighbors, which is often called reproduction. \\
+
+The great mathematician John Horton Conway created the game in 1970. It was published that same year in Martin Gardner's "Mathematical Games" section of Scientific American. There, Conway conjectured that the population would always be bounded for any given initial state. This conjecture was disproved by Bill Gosper's team at MIT, who presented Gosper's glider gun, a configuration that cyclically produces gliders indefinitely. Four of these structures can be found in the animation above.\\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_11/MIB0020_GameOfLife.py}
+}
+
+\artpage[../Output/LowQuality/MIB0021_ScrambleSquares.png]{Scramble Squares}{%
+The Scramble Squares is a surprisingly difficult puzzle where 9 square pieces have to be arranged in such a way that their adjacent edges match. There are four possible pictures, with two different halfs each. Each edge of the puzzle pieces has one particular half of a particular image. You can find versions of it with animals, airplanes, planets...\\
+
+The pieces can be placed in $9! \times 4^9$ different ways, which gives the absolutely ridiculous number of 95.126.814.720 possible combinations. However, if the game is built correctly, only one solution exists! This post comes after some friends and me were betting on whether a computer algorithm would be able to solve it in a reasonable time. Obviously, trying every possible combination is way out of the question.\\
+
+However, the problem turned out to be solvable by depth search using a programming technique known as backtracking. This algorithm explores the decision tree of different piece positions. Since we cannot possibly explore the whole tree, we have to prune it! This means abandoning all branches that have already been proved to lead nowhere. This reduces the number of explored nodes down to 154. The puzzle is therefore solved in about 5 millisecons.  \\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_11/MIB0021_ScrambleSquares.py}
+}
+
+\artpage[../Output/LowQuality/MIB0022_MugCardioid.png]{Mug Cardioid}{%
+Have you ever noticed the strange heart shape that appears on the surface of coffee in a mug? This shape is produced by the light rays coming from one point point of the mug wall. As they reflect on the walls, the rays span a family of curves in space. All of these lines happen to be tangent to the heart curve, which acts as the envelope for the whole family.\\
+
+In the particular case of light rays, envelopes are usually known as caustics. The name comes from the fact that a sufficient concentration of light can cause burning, especially at cusp singularities. The heart-shaped caustic curve created in a coffee mug is actually a cardioid, which has one of such cusp singularities.\\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_11/MIB0022_MugCardioid.py}
+}
+
+\artpage[../Output/LowQuality/MIB0023_AmbidextrousSofa.png]{Ambidextrous Sofa}{%
+In a post from October 24, I said that the moving sofa problem had not been solved yet. Just as a reminder, the problem concerns the two-dimensional shape with the largest area that can slide through an L-shaped corridor of unit width. Well, now the problem might have been solved in some recent papers by Zhipeng Deng and Jineon Baek, who claim to have proved that Gerver's sofa is indeed optimal. They also claim that the best ambidextrous sofa, also known as Romik's car, is optimal as well.\\
+
+The ambidextrous sofa follows the same idea as the original sofa problem, but this time we want the sofa to be able to make turns in both directions. That is, it should be able to slide through left and right corners. This obviously constrains the shape further. Dan Romik found a very good shape in 2017, whose area is reduced to 1.64496... and is now believed to be the optimal one. In this case, the sofa looks like a pair of sunglasses. In this post you can see a shape that has been found by a neural network, closely resembling Romik's solution.\\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_12/MIB0023_AmbidextrousSofa.py}
+}
+
+\artpage[../Output/LowQuality/MIB0024_RomanescoFractal.png]{Romanesco Fractal}{%
+Romanesco broccoli is a really cool variety of cauliflower (Brassica oleracea var. botrytis) which has a remarkable fractal shape.It is also quite good to eat! As any cauliflower, it is an inflorescence, but in this case its meristems are neatly arranged in logarithmic spirals around its axis. In a similar way as sunflowers, the number of such spirals is usually a Fibonacci number. \\
+
+Some time ago I decided to work on a mathematical generation of its shape, as a 3D analogy of the Barnsley fern, in a YouTube mathematical video. In this case, the shape is generated by repeatedly applying 14 linear transformations to a cloud of 100.000 random points. The first one is a rescaling towards upper rows of the broccoli, while the other 13 correspond to the 13 meristem spirals.\\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_12/MIB0024_RomanescoFractal.py}
+}
+
+\artpage[../Output/LowQuality/MIB0025_MoirePatterns.png]{Moiré Patterns}{%
+Moiré patterns appear whenever two periodic lattices overlap. They get their name from a type of cloth, but you can see them everywhere: When looking through a double fence on the street, when taking a digital picture of a screen, and of course when two layers of transparent cloth overlap. \\
+
+This effect comes from the addition of slightly different frequencies. In image and signal processing, it is called aliasing and is usually a nightmare to deal with. In acoustics, it is known as beating, and appears when two nearby notes sound together.\\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_12/MIB0025_MoirePatterns.py}
+}
+
+\artpage[../Output/LowQuality/MIB0026_BalrogFractal.png]{Balrog Fractal}{%
+I like to call this one the Balrog Fractal, for obvious reasons. This foe is beyond any of you, run! \\
+
+This is yet another variant of the Mandelbrot set, but in this case the iterated function is $z \to cos(z) - i/c$. Here we inverted the complex plane of c, and we rotated it 90 degrees for it to look more like one of J. R. R. Tolkien's demonic monsters. In the central region of the fractal, z only needs a few iterations to diverge. This is why the balrog has discrete jumps in color, resembling some diabolic flowers.\\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_12/MIB0026_BalrogFractal.py}
+}
+
+\artpage[../Output/LowQuality/MIB0027_JoukowskyAirfoil.png]{Joukowsky Airfoil}{%
+The aerodynamic flow around an airfoil produces a lift force, which makes flying possible. Amazingly enough, the flow displayed in this video has an analytical solution. This is known as the Joukowsky airfoil, and was used by Nikolai Zhukovsky to estimate the lift an drag on an airplane wing in 1910, many decades before computer simulations were possible. Specifically, this is a solution for a two-dimensional incompressible potential flow, and uses a number of beautiful tricks from the theory of complex analysis.\\
+
+These techniques use the fact that the Cauchy–Riemann condition on holomorphic complex functions implies that both their real and imaginary parts satisfy satisfy Laplace's equation, thus defining a potential flow. This way, we can use a taylor-made combination of such functions in order to impose the boundary conditions that we want. For instance, the flow around a disk can be constructed by adding together a uniform flow, a doublet and a vortex.\\
+
+Once we have a solution, we can transform it into others by applying other holomorphic functions, which act as conformal maps. In our case, the Joukowsky transform $z \to z + 1/z$ maps the shape of a disk into the airfoil shape in the figure. By using Bernoulli's principle, we can then find the pressure at each point. In the figure, low pressure is painted red and high pressure is blue. As you can see, the pressure above the wing is lower than below, thus producing a lift force.\\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_01/MIB0027_JoukowskyAirfoil.py}
+}
+
+\artpage[../Output/LowQuality/MIB0028_HopfFibration.png]{Hopf Fibration}{%
+The Hopf fibration is a decomposition of a 3-sphere (a 4-dimensional sphere) into its great circles, one for each point on the 2-sphere (a regular sphere). In other words, each point of the 2-sphere corresponds to a circle, which we call a fiber. This type pf decompositions are called fiber bundles, and are a very important part of differential topology. \\
+
+Since the 3-sphere lives in a 4-dimensional world, a good way to visualize it is by performing a stereographic projection of its points onto $\mathbb{R}^3$ (regular 3D space). In this way we can choose points on a 2-sphere, in this case lines of constant latitude, and produce cool plots of linked colorful fibers like the one in the picture.\\
+
+This particular fibration is closely related to the structure of rotations in 3D space, and therefore it has implications for quantum mechanics and particle physics. Also, it is relevant in the theory of quaternions, that are used for computer graphics and robotics, even for the control of quadcopter drones!\\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_01/MIB0028_HopfFibration.py}
+}
+
+\artpage[../Output/LowQuality/MIB0029_KochSnowflake.png]{Koch Snowflake}{%
+The Koch snowflake is a fractal curve introduced in 1904 by Helge von Koch, as a continuous closed curve without any tangent line. It is created from an equilateral triangle, iteratively inserting additional triangles at the center third of each edge. This figure has a finite area but an infinite perimeter. \\
+
+You can also calculate its fractal dimension, which turns out to be log(4)/log(3) = 1.26186... This means that its dimension is higher than that of a line, but less than a 2d-surface. It can also be used as a tile, which completely covers the plane.\\
+
+Here you can see the curve in a Squid Game style. I may have a twisted mind, but this infinitely complicated closed curve reminded me of the dalgona cookie game. In that game the players have to scratch the cookie with a needle to extract the central shape without breaking it. With an infinite perimeter shape, Seong Gi-hun would be completely doomed.\\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_01/MIB0029_KochSnowflake.py}
+}
+
+\artpage[../Output/LowQuality/MIB0030_TowerOfHanoi.png]{Tower of Hanoi}{%
+The Tower of Hanoi is a mathematical puzzle where a number of disks of decreasing size, with a hole in the middle, are stacked on a pole forming an inverted conical shape. There are three different poles, and the goal of the game is to move the stack of disks to another one of the poles, subject to the following rules:
+
+\begin{itemize}
+  \item You can only move one disk at a time.
+  \item You can only place a disk on top of a smaller disk.
+\end{itemize}
+
+The puzzle was invented in 1883 by French mathematician Édouard Lucas. Its solution is quite interesting for mathematicians and programmers alike, as it can be understood in a recursive form. This means that you can solve the puzzle with N disks once you know the solution for $N-1$ disks. This makes it very easy to program, as in the movie above.The only problem is that the number of moves increases exponentially with the number of disks. Namely, for N disks you need to make $2^N - 1$ moves. \\
+
+According to a legend, the priests at a temple in Benares are constantly working on a puzzle with 64 disks. The legend says that the world will end when this puzzle is completed. But do not worry, as the number of moves that are required to finish such puzzle are ridiculous. Moving a disk every second, it would take 584,542,046,091 years to complete, 42 times the age of our Universe!\\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_03/MIB0030_TowerOfHanoi.py}
+}
+
+\artpage[../Output/LowQuality/MIB0031_MathieuFunctions.png]{Mathieu Functions}{%
+Mathieu's differential equation is a generalization of the harmonic oscillator equation that appears in many physics problems involving oscillations. It was first described by  Émile Léonard Mathieu in 1868, when solving a the frequency spectrum of an elliptical drum. More modern applications include quantum mechanics, electromagnetism and even gravitation. The picture above shows part of its eigenfrequency spectrum.\\
+
+Much of the knowledge we have about this equation is owed to a major figure in the field of numerical analysis: Gertrude Blanch. After finishing her PhD at Cornell in 1935, Blanch worked as the mathematical director and Chair of the Planning Committee for the Mathematical Tables Project of the Works Progress Administration during World War II.\\
+
+This institution employed about 450 human computers, used to calculate numerical tables of mathematical functions, and also all kinds of numerical computations for science and technology. In some sense, Mathematical Tables Project was the equivalent at the time of a modern supercomputer. Later on, Gertrude Blanch was one of the first numerical analysts for electronic computers.\\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_03/MIB0031_MathieuFunctions.py}
+}
+
+\artpage[../Output/LowQuality/MIB0032_BusyBeaver.png]{Busy Beaver}{%
+A Turing machine is an idealized model of a computer. It was introduced in 1936 by Alan Turing, as a theoretical tool to explore the limits of what can be computed in a formal system. A standard Turing machine has an infinitely long tape with symbols on it, typically 0s and 1s, and a head that reads one at a time. At every step, the head reads a symbol on the tape, and applies a particular rule. Based on the rule, it writes a different symbol, moves one step to the left or right, and changes its state to another rule. A rule can also instruct the machine to stop, or halt. \\
+
+Deciding whether a Turing machine will eventually halt or not is known as the "halting problem", and is one of the most famous problems in computer science. Of all the possible machines with n states that eventually halt, the one that lasts the longer is called the Busy Beaver. The number of steps that it takes for it to stop is known as BB(n), and its value is extremely difficult to prove. The first four of these numbers are known to be 1, 6, 21 and 107.\\
+
+BB(5) was very recently found to be 47,176,870, by a collaborative project known as The Busy Beaver Challenge, where amateur mathematicians used computer-assisted proofs. The picture above shows the first 35,000 iterations of the 5-state Busy Beaver winner. Each row of pixels represents one of the iterations. This is quite probably the last Busy Beaver we will ever prove, as BB(6) seems to be so gigantic that no computer is capable of handling it.\\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_03/MIB0032_BusyBeaver.py}
+}
+
+\artpage[../Output/LowQuality/MIB0033_BiharmonicModes.png]{Biharmonic Modes}{%
+Chladni patterns are shapes that form when a little bit of sand is placed on top of a vibrating metal plate. They were first observed by Robert Hooke on glass plates in 1680, and later on described by 1787 by Ernst Chladni by running a violin bow along the edge of a metal plate. As the modes of vibration of the plate get excited, the sand accumulates along the nodal lines and creates mesmerizing figures.\\
+
+In 1808, Ernst Chladni demonstrated the technique in the Paris Academy of Sciences, which prompted Napoleon Bonaparte to set a prize for the best mathematical explanation of the phenomenon. The contest was finally won in 1816 by the french mathematician Sophie Germain, who first derived the biharmonic differential equation. The picture above shows the first 25 modes of vibration of a plate which is clamped at the edges. Not exactly Chladni's setup, but this one is easier to solve. \\
+
+These patterns are found here using spectral methods, as explained in Lloyd N. Trefethen's book. They are extracted from the same biharmonic equation that Sophie Germain derived more than two centuries ago. Notice that the 17th pattern closely resembles the typical Barcelona flower tile, designed by Josep Puig i Cadafalch, which has become a symbol of my city.\\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_03/MIB0033_BiharmonicModes.py}
+}
+
+\artpage[../Output/LowQuality/MIB0034_AragoSpot.png]{Aragó Spot}{%
+The Aragó spot has a really interesting story related to the discovery of the wave theory of light, invloving an important scientist and politician from North Catalonia (now southern France): Domènec Francesc Joan Aragó i Roig. At the beginning of the 19th century, there was a strong debate to decide whether light should be described as a particle or as a wave. Ironically enough, about a century later the quantum theory would end up telling us that light should be described as both. \\
+
+In any case, in yet another competition from the French Academy of Sciences, Augustin-Jean Fresnel submitted the wave theory of light. After studying the theory in 1818, Siméon Denis Poisson pointed out that it had to be wrong, as one of its predictions was nonsensical: The theory predicted that a bright spot should appear in the center of the shadow of a circular object. He claimed that this effect of the wave theory was clearly absurd, which proved him right as a supporter of the corpuscular theory of light.\\
+
+That is, until Francesc Aragó actually performed the experiment and observed the bright spot, thus confirming that light was indeed behaving as a wave. This spot is now known as Aragó spot, Poisson spot, or Fresnel spot. The picture above is a simulation, using the Fast Fourier Transform (FFT), of the shadow of a disk (4 mm in diameter) under the light from a standard red laser pointer (wavelength of 650 nm). You can clearly observe the Aragó spot in the middle of it.\\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_04/MIB0034_AragoSpot.py}
+}
+
+\artpage[../Output/LowQuality/MIB0035_JuliaSet.png]{Julia Set}{%
+The Julia sets (and their Fatou sets) are another big family of fractals that I haven't explored much in this channel. They were described by French mathematicians Gaston Julia and Pierre Fatou in 1918, as a starting point for the field of holomorphic dynamics. The fourth publication in this channel, the Newton fractal (MIB0004) is an example of a Fatou/Julia set.\\
+
+As sets in the complex plane, they are once again related to the good old Mandelbrot, but they are somewhat complementary to it. For the Mandelbrot set, we were looking at the orbits of numbers under the iteration $z \to z^2 + c$. We initialized $z$ at zero, and checked what happened for each value of $c$. For this family of Julia sets, we are doing the opposite. We set $c$ to a fixed value, and check what happens for different initial values of $z$. In this sense, each point on the complex plane gives rise to a different Julia set.\\
+
+Since we cannot go over all the points on the Mandelbrot fractal, in this video we are moving along a circle, centered at the origin, with radius $R = 0.7885$. The center of the image becomes dark red whenever c falls inside of the Mandelbrot set.\\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_05/MIB0035_JuliaSet.py}
+}
+
+\artpage[../Output/LowQuality/MIB0036_PendulumFractal.png]{Pendulum Fractal}{%
+You are looking at the face of chaos! The double pendulum is a simple physical system where a pendulum is attached at the end of another pendulum. The motion of the double pendulum is chaotic, which essentially means that it is extremely sensitive to initial conditions. A tiny difference in the initial position will give rise to completely different behavior at later times.\\
+
+In the picture above, we evolved in time a double pendulum for each pixel, starting from rest at different initial positions. The coordinates in the image correspond to the initial angles for each arm of the pendulum. Then, the color of each pixel represents the time it took for either of the rod to flip over. The black points flipped almost immediately, while the white ones never flipped during the simulation time. \\
+
+The differential equations of motion for the double pendulum are not easy to derive, and typically require the use of Lagrangian or Hamiltonian Mechanics. In this case, we focus on the simple case where both rods of the pendulum have the same length and mass. The simulation time is $T = 1000 \sqrt{l / g}$.\\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_05/MIB0036_PendulumFractal.py}
+}
+
+\artpage[../Output/LowQuality/MIB0037_DoublePendulum.png]{Double Pendulum}{%
+Since the last post had to do with the double pendulum, I thought it was a pity not to show an animation of the actual pendulum. Actually, here I am simulating a collection of 1000 of them, with tiny variations of the initial position. Specifically, the initial angles of the rods have variations up to 2 arcseconds in both directions. Remember that 1 arcsecond is 1/3600 of a degree. At first, all of them follow very close trajectories, so close that we cannot distinguish them on the video. \\
+
+However, as the time passes they start separating from each other more and more, until become completely different. This extreme sensitivity to tiny differences in the initial conditions is what we call chaotic behavior. Chaos makes it extremely difficult to predict the future evolution of a system, even if its governing laws are perfectly deterministic. This causes long term weather forecast to be a very challenging problem, for instance.\\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_05/MIB0037_DoublePendulum.py}
+}
+
+\artpage[../Output/LowQuality/MIB0038_PrimAlgorithm.png]{Prim Algorithm}{%
+This maze has been generated using Prim's Algorithm, which is a vey famous method in graph theory to find minimum spanning trees. The algorithm itself was first discovered 1930 by Vojtěch Jarník, but then Robert C. Prim and Edsger W. Dijkstra found it independently, and published it in 1957 and 1959 respectively. For the maze, each of the cells is treated as a vertex of a graph, which can be connected when they are adjacent and there is no wall between them. The tree structure of the graph guarantees that the solution is unique.\\
+
+The solution of the maze is pretty straightforward if you start from the end, and know the minimum distance of any cell to the maze entrance. You just have to start at the end cell, and take at each step the direction that lowers the distance to the entrance. The minimum distance function is typically not so easy to find, and it usually requires an additional algorithm such as Dijkstra's algorithm. In this case, this distance function (shown as a color map), is already known from the way the maze was built.\\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_06/MIB0038_PrimAlgorithm.py}
+}
+
+\artpage[../Output/LowQuality/MIB0039_PrimDistances.png]{Prim Distances}{%
+After making the last post, I found out that the distance function for Prim's algorithm looks really cool for very large mazes. For this reason, here I generated a minimum spanning tree for a 200x200 grid, starting from its center. The colormap represents the distance, in number of edges, to the central node. \\
+
+As the graph has no closed loops, the trajectories leading to its center split into different branches. Some of them are easier to reach, you could call them shortcuts, and others require more steps to access. This creates an amazing pattern that resembles an explosion, or some portal to another world. They also remind me of the mysterious tunnels that Doctor Who uses to travel with his TARDIS.\\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_06/MIB0039_PrimDistance.py}
+}
+
+\artpage[../Output/LowQuality/MIB0040_FourierSeries.png]{Fourier Series}{%
+A Fourier series is a really remarkable way of decomposing any periodic function into a combination of trigonometric functions, sines and cosines. In other words, we can use a Fourier series to draw any closed curve by concatenating a large number of spinning circles, each one with a different rotation speed and phase. In the picture we concatenate the red segments, each one turning inside of a yellow circle, in such a way that each segment starts at the tip of the previous one. By rotating 100 of them at once, each with a multiple of the fundamental frequency, we can recreate the picture of an umbrella.\\
+
+Fourier series were introduced in 1807 by Jean-Baptiste Joseph Fourier in an article about heat conduction in solids. However, their use extends far beyond the study of heat. Actually, they are arguably one of the most important and powerful tools of modern mathematics, physics and engineering. They are widely used in sound and image processing, as well as in the solution of differential equations and other mathematical problems.\\
+
+A common example of a Fourier series appears when we analyze the sound waves of a single note from a musical instrument. Even though the note has a standard fundamental frequency, say 440 Hz, it will always contain higher harmonics that produce the distinct sound of that particular instrument. The different amplitudes of such harmonics are the terms of the Fourier series of that signal. Thanks to modern computational tools such as the FFT, this type of analysis is routinely used in music software.\\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_06/MIB0040_FourierSeries.py}
+}
+
+\artpage[../Output/LowQuality/MIB0041_PaulTrap.png]{Paul Trap}{%
+A Paul trap is a device that can be used to trap charged particles, such as ions. It is often used in experimetal physics, mass spectrometry and as a key component in quantum computing. Paul traps were developed by Wolfgang Paul in the 1950s, for which he shared the Nobel Prize in Physics in 1989. He used to refer to Wolfgang Pauli, another notorious physicist, as his imaginary part.\\
+
+Earnshaw's theorem states that it is impossible to confine charged particles using static electric fields. These traps, also known as quadripole ion traps, overcome this restriction by introducing oscillating fields, which result in a stable confining effect. The dynamics and stability conditions for ions in oscillating traps can be studied using Mathieu's equation, which already appeared in this channel (MIB0031).\\
+
+There are several mechanical and magnetical analogs to Paul traps. A very popular example is the rotating saddle, in which a metal ball can be trapped on top of a rotating surface shaped like a horse saddle. In this post we show a simulation of this rotating saddle, with 100 particles. The angular velocity slowly decreases with time, until it goes below the threshold of stability (the last quarter of the video) and the particles disperse. \\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_06/MIB0041_PaulTrap.py}
+}
+
+\artpage[../Output/LowQuality/MIB0042_StableFluids.png]{Stable Fluids}{%
+The stable fluids algorithm is a method to simulate the flow of an incompressible viscous fluid, like water. This particular method was introduced in 1999 by Jos Stam, and it is widely used in computer graphics as it is quite realistic, computationally very efficient and unconditionally stable. This makes it very useful even for real-time interaction.\\
+
+The simulation above is a Python adaptation of the code by Felix Köhler for the great YouTube channel Machine Learning \& Simulation. The color map shows the vorticity, i.e., the curl of the velocity field, which is a common way of highlighting the small vortices and eddies moving around the fluid.\\
+
+This method evolves the velocity field by iterating four basic steps: external forcing, advection, diffusion, and divergence removal. The last two steps can be done very efficiently using the Fast Fourier Transform (FFT), as derivatives in Fourier space simply become products by the wavevector k.\\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_06/MIB0042_StableFluids.py}
+}
+
+\artpage[../Output/LowQuality/MIB0043_EinsteinTile.png]{Einstein Tile}{%
+This is an einstein tiling, an aperiodic tiling of the plane with a single tile shape. The name has nothing to do with the physicist Albert Einstein, however. Instead, it comes from the actual German meaning of the words "ein Stein", one stone, referring to the fact that there is only one type of tile involved. These shapes form an aperiodic tiling, which means that they cover the plane without leaving any gaps, with a pattern that never repeats itself. This means that it is impossible to shift the pattern and make it match the previous arrangement.\\
+
+Believe it or not, the first einstein tile (the one in the image) was discovered very recently, in November 2022. It is usually called the hat, or the shirt, and it was first observed by an amateur mathematician, David Smith. He then published a paper together with Joseph Samuel Myers, Craig S. Kaplan and Chaim Goodman-Strauss with two formal proofs of its properties. Before that, several aperiodic tilings were known, but they needed more than one type of tile. The first one, found by Robert Berger in 1964, required 20426 tiles. This number was reduced several times, until Roger Penrose found set of just two tiles. \\
+
+This post has probably been the hardest for me to code. The difficulty comes precisely from the fact that there is no periodic way of organizing the tiles. My quick and dirty algorithm uses a set of substitution rules explained in the original paper. With this method, the hats are grouped together into metatiles, and then recursively into larger and larger supertiles that have to be fit together. As I wanted my code to be as self-contained as possible, I managed to do it using only numpy and matplotlib.\\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_06/MIB0043_EinsteinTile.py}
+}
+
+\artpage[../Output/LowQuality/MIB0044_KuramotoSivashinsky.png]{Kuramoto-Sivashinsky}{%
+The Kuramoto-Sivashinsky equation is a fourth order differential equation with very interesting behavior, leading to an organic-looking landscape that resembles a bundle of veins and arteries. It was discovered in the 70s by  Yoshiki Kuramoto and Gregory Sivashinsky in order to model instabilities of a laminar flame front. It has also been studied recently by John C. Baez, Steve Huntsman and Cheyne Weis.\\
+
+However, its interest goes beyond that of flame front. The solutions have been shown to be chaotic, and their evolution is irreversible in time. It is quite hard to integrate, as it is a stiff differential equation. In this case I used a technique called Exponential Time Differencing, as suggested by Felix Köhler in the YouTube channel Machine Learning \& Simulation. These awesome numerical methods were developed by S.M. Cox and P.C. Matthews.\\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_07/MIB0044_KuramotoSivashinsky.py}
+}
+
+\artpage[../Output/LowQuality/MIB0045_Autostereogram.png]{Autostereogram}{%
+An autostereogram, popularly known as a magic eye picture, is an apparently nonsensical image that encodes a 3D illusion when viewed properly. The proper technique to visualize the 3D shape is called "wall-eyed convergence", and it is achieved by trying to focus both your eyes in an imaginary point behind the image. Can you see it? Let me know in the comments what you see!\\
+
+The 3D illusion is created by repeating a pattern periodically in the horizontal direction. The period of repetition is chosen to vary depending on the "depth map" of the hidden landsacape. In this way, longer or shorter periods of repetition will correspond to points that appear further or closer to the observer, respectively. \\
+
+The first "random dot" autostereogram was hand-drawn by Boris Kompaneysky in 1939, but the modern pictures were created by Tom Baccei and Cheri Smith in 1991. These were commercially distributed with the name of "Magic Eye", and became very popular in the 90s and early 2000s. \\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_07/MIB0045_Autostereogram.py}
+}
+
+\artpage[../Output/LowQuality/MIB0046_IsingModel.png]{Ising Model}{%
+The Ising model is a very simple model for a ferromagnetic material. A large number of "atoms" is distributed on a lattice, each one with a spin that can point up or down. Neighboring atoms interact by decreasing their energy when their spins are aligned. Even though this is a really simple model, it contains a surprising amount of physical information, including a phase transition. At low temperatures, the spins tend to align in the same direction, producing a net magnetization. However, above some critical temperature, the system becomes disordered and the magnetization drops to zero.\\
+
+The square lattice Ising model was solved analytically in 1944 by Lars Onsager, in a rather complicated calculation. In this image you can see how the system looks like at the critical temperature, where the two colors correspond to two different spin orientations. Generating this image requires sampling from the Boltzmann distribution, which is quite hard as there are $2^N$ possible spin combinations. The configuration has been obtained by a variant of the Metropolis-Hastings algorithm, an extremely powerful a Markov chain Monte Carlo (MCMC) method, running on a GPU.\\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_07/MIB0046_IsingModel.py}
+}
+
+\artpage[../Output/LowQuality/MIB0047_HyperbolicTiling.png]{Hyperbolic Tiling}{%
+Hyperbolic space is a very particular geometry that has constant negative curvature everywhere. Together with spherical geometries, which have constant positive curvature, hyperbolic geometry is a simple example of a non-Euclidean geometry. These are geometries that do not satisfy Euclid's fifth postulate in its classical form, and have a great importance in modern Mathematics and Physics.\\
+
+The picture shows a uniform tiling of the Poincaré disk, which results from a conformal compactification of 2-dimensional hyperbolic space. In this model, the entire space is "shrunk" into a disk of unit radius. This type of representations were popularized by the great mathematical artist Dutch artist M. C. Escher, in particular his Circle Limit III (1959).\\
+
+The Lorentzian version of hyperbolic space, the one containing space and time coordinates, is called anti-de Sitter space and has gained an enormous interest in the field of theoretical physics. In 1997, Juan Maldacena proposed the AdS/CFT correspondence, which relates gravitational theories in anti-de Sitter space to quantum field theories living in its boundary.\\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_07/MIB0047_HyperbolicTiling.py}
+}
+
+\artpage[../Output/LowQuality/MIB0048_Gyroid.png]{Gyroid}{%
+A gyroid is an example of a minimal surface which appears in many biological and chemical structures. More recently, this type of geometry has been used in 3D printing to form lightweight and resistant internal structures. I have to admit that the picture above is not exact but a trigonometric approximation, as finding the actual gyroid surface is quite complicated.\\
+
+Minimal surfaces are those which locally minimize their area, which means that they have zero mean curvature everywhere. These are the shapes that open soap films, or bubble films, take when stretched by a wire frame. Many other examples of minimal surfaces appear in physics, such as the horizons of black holes.\\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_07/MIB0048_Gyroid.py}
+}
+
+\artpage[../Output/LowQuality/MIB0049_PenroseTriangle.png]{Penrose Triangle}{%
+The Penrose triangle... is not a triangle. But it looks like it, from the correct perspective! It is, however, an impossible triangle which cannot exist in 3D space. It was created in 1934 by Oscar Reutersvärd, but it was then rediscovered and published in 1958 by the famous mathematician Roger Penrose, together with his father Lionel Penrose.\\
+
+As many other strange geometries, it appears in the drawings of M. C. Escher, who was also fascinated by impossible objects. For instance, some similar shapes appear in his work Waterfall (1961). Some real-life sculptures have actually been built, using the same illusion as in the video above. One of them is in East Perth, Australia, and the other in Gotschuchen, Austria. The illusion of the impossible object can only be seen from a very specific direction, of course.\\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_08/MIB0049_PenroseTriangle.py}
+}
+
+\artpage[../Output/LowQuality/MIB0050_VonKarman.png]{Von Kármán}{%
+Von Kármán vortex streets are a stream of vortices, or eddies, that are produced when a fluid moves past an obstacle. It is one of the most famous instabilities in fluid dynamics, which produces a characteristic turbulence pattern. It is quite common to find this phenomenon in nature, for instance when a river flows past a round stone. \\
+
+The street of vortices can also be observed in clouds when the wind drives them over high mountains. It is also responsible for the howling sound of the wind around wires, poles and chimneys. Actually, many cylindrical chimmneys have some special fins in order to avoid the vibrations from von Kármán vortex streets.\\
+
+This simulation used a Lattice Boltzmann method, a very interesring algorithm for computational fluid dynamics which models the movement of fictitious particles on a lattice. The code is an adaptation from the one published in a great Medium article by Philip Mocz.\\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_08/MIB0050_VonKarman.py}
+}
+
+\artpage[../Output/LowQuality/MIB0051_HofstadterButterfly.png]{Hofstadter's Butterfly}{%
+Hofstadter's butterfly is a graph of the quantum energy levels of electrons in a 2D lattice, under a magnetic field. This butterfly shape appears when the magnetic flux per unit cell is a rational multiple of the magnetic flux quantum. Its stunning fractal structure is related to the integer quantum Hall effect and topological quantum numbers.\\
+
+The butterfly was first plotted by Douglas R. Hofstadter in a research paper in 1976. By analizing the spectrum of Bloch electrons under a magnetic field, he found a recurrence relation known as Harper's equation. He then noticed that the spectrum of such equation largely depended on the rationality or irrationality of its flux parameter. \\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_09/MIB0051_HofstadterButterfly.py}
+}
+
+\artpage[../Output/LowQuality/MIB0052_TentMap.png]{Tent Map}{%
+The tent map is a very close relative of the logistic map. In this case, instead of iterating a parabolic function, we iterate a triangular function of the form $x \to \mu \min (x, 1 - x)$. The name of the map comes from the fact that this triangle function looks a little bit like a traditional camping tent.\\
+
+In this case I cheated a tiny bit and I flipped the axes, so it looks more like a sail. I thought it was a good opportunity to use this background music :) . The parameter mu is on the vertical axis and goes from 1 at the top to 2 at the bottom. The iterated variable $x$ is plotted in the horizontal axis and goes from 0 to 1.\\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_09/MIB0052_TentMap.py}
+}
+
+\end{document}
