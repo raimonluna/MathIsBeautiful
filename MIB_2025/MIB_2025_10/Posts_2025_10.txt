@@ -1,0 +1,10 @@
+=================================================================
+
+An Apollonian gasket is some cool geometrical construction by recursively trying to fill a large circle with smaller circles, without overlaps. Every gap between three mutually tangent circles is filled by a fourth circle, which is tangent to all three. This creates three new gaps, that are then filled by even smaller circles. 
+
+The problem of finding a circle tangent to another three is known as the problem of Apollonius, named after the ancient Greek geometer who first solved the problem: Apollonius of Perga. This is why the Apollonian gasket got its name. However, the first description of such a construction is from the great Gottfried Wilhelm Leibniz in 1706.
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_10/MIB0053_ApollonianGasket.py
+
+=================================================================
+
