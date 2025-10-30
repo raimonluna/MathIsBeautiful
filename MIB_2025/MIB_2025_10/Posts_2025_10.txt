@@ -8,3 +8,11 @@ Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/
 
 =================================================================
 
+The Alexander horned sphere is a rather spooky topological object. It is built by deforming a sphere into the shape of a croissant, with two horns. Then, we deform the tips of the horns into two interlaced mini-croissants with two horns each. By repeating this procedure infinitely many times, adding smaller and smaller croissants to each pair of opposing horns, we create an endless puff pastry labyrinth.
+
+It was designed in 1924 by James Waddell Alexander II as a pathological example of a topological 3-ball which is simply connected, but whose exterior is not. This means that a closed loop inside the horned sphere can be continuously shrunk to a point while staying inside. In other words, the sphere has no "holes" in it. However, good luck trying to shrink a closed loop outside the sphere which is linked with one of its infinitely many croissants. 
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_10/MIB0054_HornedSphere.py
+
+=================================================================
+

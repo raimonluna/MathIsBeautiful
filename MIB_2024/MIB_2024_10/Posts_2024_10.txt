@@ -6,7 +6,7 @@ I guess it's impossible to start a series of mathematical pictures with anything
 
 The image depicts on the complex plane the number of iterations of the map z ---> z^2 + c that it takes for z to reach a magnitude threshold. For values of c in the yellow central region, the Mandelbrot set itself, the value of z never diverges under this iteration.
 
-Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/October2024/MIB0001_MandelbrotSet.py
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_10/MIB0001_MandelbrotSet.py
 
 =================================================================
 

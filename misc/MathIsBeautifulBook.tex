@@ -73,7 +73,7 @@ I guess it's impossible to start a series of mathematical pictures with anything
 
 The image depicts on the complex plane the number of iterations of the map $z \to z^2 + c$ that it takes for $z$ to reach a magnitude threshold. For values of $c$ in the yellow central region, the Mandelbrot set itself, the value of $z$ never diverges under this iteration.\\
 
-Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/October2024/MIB0001_MandelbrotSet.py}
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2024/MIB_2024_10/MIB0001_MandelbrotSet.py}
 }
 
 \artpage[../Output/LowQuality/MIB0002_BarnsleyFern.png]{Barnsley Fern}{%
@@ -423,7 +423,7 @@ However, as the time passes they start separating from each other more and more,
 Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_05/MIB0037_DoublePendulum.py}
 }
 
-\artpage[../Output/LowQuality/MIB0038_PrimAlgorithm.png]{Prim Algorithm}{%
+\artpage[../Output/LowQuality/MIB0038_PrimAlgorithm.png]{Prim's Algorithm}{%
 This maze has been generated using Prim's Algorithm, which is a vey famous method in graph theory to find minimum spanning trees. The algorithm itself was first discovered 1930 by Vojtěch Jarník, but then Robert C. Prim and Edsger W. Dijkstra found it independently, and published it in 1957 and 1959 respectively. For the maze, each of the cells is treated as a vertex of a graph, which can be connected when they are adjacent and there is no wall between them. The tree structure of the graph guarantees that the solution is unique.\\
 
 The solution of the maze is pretty straightforward if you start from the end, and know the minimum distance of any cell to the maze entrance. You just have to start at the end cell, and take at each step the direction that lowers the distance to the entrance. The minimum distance function is typically not so easy to find, and it usually requires an additional algorithm such as Dijkstra's algorithm. In this case, this distance function (shown as a color map), is already known from the way the maze was built.\\
@@ -556,5 +556,22 @@ In this case I cheated a tiny bit and I flipped the axes, so it looks more like 
 
 Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_09/MIB0052_TentMap.py}
 }
+
+\artpage[../Output/LowQuality/MIB0053_ApollonianGasket.png]{Apollonian Gasket}{%
+An Apollonian gasket is some cool geometrical construction by recursively trying to fill a large circle with smaller circles, without overlaps. Every gap between three mutually tangent circles is filled by a fourth circle, which is tangent to all three. This creates three new gaps, that are then filled by even smaller circles. \\
+
+The problem of finding a circle tangent to another three is known as the problem of Apollonius, named after the ancient Greek geometer who first solved the problem: Apollonius of Perga. This is why the Apollonian gasket got its name. However, the first description of such a construction is from the great Gottfried Wilhelm Leibniz in 1706. \\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_10/MIB0053_ApollonianGasket.py}
+}
+
+\artpage[../Output/LowQuality/MIB0054_HornedSphere.png]{Alexander Horned Sphere}{%
+The Alexander horned sphere is a rather spooky topological object. It is built by deforming a sphere into the shape of a croissant, with two horns. Then, we deform the tips of the horns into two interlaced mini-croissants with two horns each. By repeating this procedure infinitely many times, adding smaller and smaller croissants to each pair of opposing horns, we create an endless puff pastry labyrinth. \\
+
+It was designed in 1924 by James Waddell Alexander II as a pathological example of a topological 3-ball which is simply connected, but whose exterior is not. This means that a closed loop inside the horned sphere can be continuously shrunk to a point while staying inside. In other words, the sphere has no "holes" in it. However, good luck trying to shrink a closed loop outside the sphere which is linked with one of its infinitely many croissants. \\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_10/MIB0054_HornedSphere.py}
+}
+
 
 \end{document}
