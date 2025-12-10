@@ -1,0 +1,12 @@
+=================================================================
+
+Differential growth is a computer algorithm that is often used in generative art in order to model the effects of natural morphogenesis.  It generates patterns that can resemble a variety of living organisms such as plants, corals, or lichens. Perhaps even the wrinkles of our brains, or the paths of rivers.
+
+It works by setting up a long chain of particles that interact with each other by repelling or attracting depending on their relative positions. While they evolve, some adaptive mesh refinement algorithm has to be used to fill the gaps with new particles when they become too far apart.
+
+This is a quick and dirty implementation in NumPy of the algorithm presented in the YouTube channel Programming Chaos. At this moment, the Pythonic implementation of the mesh refinement algorithm is definitely not very efficient, but hey, it works!
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_12/MIB0055_DifferentialGrowth.py
+
+=================================================================
+
