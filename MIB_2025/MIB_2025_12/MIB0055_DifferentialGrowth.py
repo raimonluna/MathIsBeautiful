@@ -28,12 +28,12 @@ def insert_points(points, max_dist):
     dists = np.sum((points - np.roll(points, 1, axis = 0))**2, axis = 1)**0.5
     if (dists > max_dist).any():   
         chunks  = np.split(points, np.where(dists > max_dist)[0])[int(dists[0] > max_dist):]
-        new_points = chunks[0]
+        new_points = [chunks[0]]
         for chunk in chunks[1:]: # Any cool way to vectorize this?
-            new_points = np.vstack([new_points, (new_points[[-1],:] + chunk[[0],:]) / 2, chunk])
+            new_points += [(new_points[-1][[-1],:] + chunk[[0],:]) / 2, chunk]
         if dists[0] > max_dist:
-            new_points = np.vstack([new_points, (new_points[[-1],:] + new_points[[0],:]) / 2])
-        return new_points
+            new_points += [(new_points[-1][[-1],:] + new_points[0][[0],:]) / 2]
+        return np.vstack(new_points)
     return points
 
 def compute_forces(points):
