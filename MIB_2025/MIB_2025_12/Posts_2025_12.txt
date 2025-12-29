@@ -10,3 +10,11 @@ Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/
 
 =================================================================
 
+The Smith chart is a smart way to calculate the behavior of transmission lines and AC circuits. When dealing with high-frequency alternating currents, part of the signal travelling across a transmission line will be reflected when it encounters a load such as an antenna. The Smith chart is a graphical way to estimate the reflection coefficient and try to minimize the reflection, a procedure that is known as impedance matching. This allows us to minimize energy losses in wireless transmission.
+
+It was introduced by Tōsaku Mizuhashi in 1937 and independently in 1939 by Phillip H. Smith and Amiel R. Volpert. The chart plots the image of the complex plane under the conformal mapping Gamma = (z - 1) / (z + 1). Using this trick, an electrical engineer can look up the normalized impedance z of the load and read the transmission coefficient Gamma without any computations. Even with modern computing, these charts are still used today.
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2025/MIB_2025_12/MIB0056_SmithChart.py
+
+=================================================================
+
