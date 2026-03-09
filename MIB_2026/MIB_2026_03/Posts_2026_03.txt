@@ -1,0 +1,11 @@
+=================================================================
+
+Antoni Gaudí (1852 - 1926) was a Catalan architect who had a great importance in the Catalan art nouveau, also known as Modernisme. Some of his most famous works, Casa Milà (La Pedrera), Casa Batlló, and Parc Güell are among the main tourist attractions in Barcelona. However, the most important work is the still unfinshed temple of La Sagrada Família. Inside of that church, Gaudí introduced the so-called double twist columns, which I try to explain in this post.
+
+The shape of this columns is created with two star-shaped bases that start at the lower end and rotate in opposite directions as they rise towards the ceiling. The section of the column is taken as the intersection of these two shapes at each level. This gradually creates a new set of nerves along the column. Once the section becomes a regular star again, we take this shape as a new base, and keep rotating at the same rate.
+
+This very visual method allowed Gaudí to design beams and columns that look very organic, resembling trees and branches, without the use of any modern design software. This column becomes perfectly circular at a finite height, which is twice the height of the first segment. You can check this by the sum of the geometric series, as each segment has half the length of the previous ones.
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2026/MIB_2026_03/MIB0058_DoubleTwistColumn.py
+
+=================================================================

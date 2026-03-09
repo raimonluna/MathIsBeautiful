@@ -594,9 +594,19 @@ Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/
 \artpage[../Output/LowQuality/MIB0057_ChaosGame.png]{Chaos Game}{%
 The chaos game is a very nice method to produce a fractal using a polygon. The idea is to start with some point in space, and then randomly choose vertices of the polygon, one at a time. Each time we choose a vertex, we introduce a new point, at some fraction of the distance between the vertex and the previous point. Usually this fraction is 1/2, so we pick the middle point as our new position.\\
 
-The picture shows the result of playing the chaos game on a penthagon, with an additional rule: we cannot choose the same vertex two times in a row. This produces this mesmerizing snowflake shape, which seems adequate for these freezing winter days. If you look closely, you can see that the fractal is filled with some terrifying faces that remind me of the ancient sculptures of the Inca god Viracocha. \\
+The picture shows the result of playing the chaos game on a penthagon, with an additional rule: we cannot choose the same vertex two times in a row. This produces this mesmerizing (pehthagonal) snowflake shape, which seems adequate for these freezing winter days. If you look closely, you can see that the fractal is filled with some terrifying faces that remind me of the ancient sculptures of the Inca god Viracocha. \\
 
 Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2026/MIB_2026_01/MIB0057_ChaosGame.py}
+}
+
+\artpage[../Output/LowQuality/MIB0058_DoubleTwistColumn.png]{Double Twist Column}{%
+Antoni Gaudí (1852 - 1926) was a Catalan architect who had a great importance in the Catalan art nouveau, also known as Modernisme. Some of his most famous works, Casa Milà (La Pedrera), Casa Batlló, and Parc Güell are among the main tourist attractions in Barcelona. However, the most important work is the still unfinshed temple of La Sagrada Família. Inside of that church, Gaudí introduced the so-called double twist columns, which I try to explain in this post.\\
+
+The shape of this columns is created with two star-shaped bases that start at the lower end and rotate in opposite directions as they rise towards the ceiling. The section of the column is taken as the intersection of these two shapes at each level. This gradually creates a new set of nerves along the column. Once the section becomes a regular star again, we take this shape as a new base, and keep rotating at the same rate.\\
+
+This very visual method allowed Gaudí to design beams and columns that look very organic, resembling trees and branches, without the use of any modern design software. This column becomes perfectly circular at a finite height, which is twice the height of the first segment. You can check this by the sum of the geometric series, as each segment has half the length of the previous ones.\\
+
+Do it yourself! Source code: \url{https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2026/MIB_2026_03/MIB0058_DoubleTwistColumn.py}
 }
 
 
