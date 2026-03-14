@@ -9,3 +9,15 @@ This very visual method allowed Gaudí to design beams and columns that look ver
 Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2026/MIB_2026_03/MIB0058_DoubleTwistColumn.py
 
 =================================================================
+
+The Fibonacci sequence is probably the most famous sequence in history. Each term of the sequence is obtained as the sum of the two previous ones: 1, 1, 2, 3, 5, 8, 13, 21... The sequence is so famous that you can actually see a few of its numbers a street art monument in Barcelona created in 1992 by Mario Merz, in the district of Barceloneta.
+
+A remarkable property of this sequence is that the ratio between consecutive Fibonacci numbers approaches a very particular number: the golden ratio. This number, phi = 1.61803..., has many interesting properties and has often been called the divine proportion. Both the Fibonacci numbers and the golden ratio appear very frequently in architecture, design and in nature itself. 
+
+The video shows a representation of the golden spiral, obtained by stacking squares whose sides follow the fibonacci numbers. You can check that each size is the sum of the two previous ones. The proportion of the whole construction approaches a golden rectangle, enclosing a logarithmic spiral with base phi.
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2026/MIB_2026_03/MIB0059_GoldenRatio.py
+
+=================================================================
+
+
