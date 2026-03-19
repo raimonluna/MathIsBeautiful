@@ -20,4 +20,12 @@ Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/
 
 =================================================================
 
+This is an attempt to generate a infinite zoom into the Barnsley fern, which was already featured in the second publication of this channel. This continuous rescaling of the fern highlights its self-similarity, using the same linear transformations that generate it in the first place.
+
+I wrote a first version this animation code for a nice article on the renormalization group flow written by @tbertolez. I publish here a more trippy version of the animation with his permission. 
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2026/MIB_2026_03/MIB0060_BarnsleyZoom.py
+
+=================================================================
+
 
