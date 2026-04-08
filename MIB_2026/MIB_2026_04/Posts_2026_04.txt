@@ -1,0 +1,11 @@
+=================================================================
+
+My precioussss... Believe it or not, this picture of the One Ring of Power is created by very simple mathematical equations. These particular systems are known as Peter de Jong Attractors, and were first published in the Computer Recreations section of Scientific American, in July 1987, in an article by Alexander Keewatin Dewdney. The picture is created as the orbit of points under some particular trigonometric mapping.
+
+There is a very large variety of attractors such as the ones by Peter de Jong. They usually contain several free numerical parameters that can be adjusted to produce all kinds of shapes. People have been exploring huge amounts of these shapes and naming them according to their imagination. I could probably fill a whole new channel just with this amazing jungle of mathematical beasts. The parameters that create the One Ring are a contribution by Johnny Svensson in Paul Bourke's incredible website. Make sure to check it out!
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2026/MIB_2026_04/MIB0061_OneRing.py
+
+=================================================================
+
+
