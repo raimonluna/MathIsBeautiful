@@ -1,0 +1,11 @@
+=================================================================
+
+The three-body problem is a very famous problem in Newtonian gravity, whose goal is to compute the trajectories of three bodies subject to mutual gravitational attraction. While the two-body problem has a simple solution, the three body problem is famous for not having a closed-form analytical solution. This fact has inspired the science fiction novel by Liu Cixin, and TV series derived from it. We can still solve the differential equations of motion numerically using a computer, of course. The solution is often chaotic though, so the positions of the bodies are hard to predict in the long term.
+
+It turns out that, while the solutions to the two-body problem are just the conic sections, the problem with three bodies admits many different orbits with mesmerizing shapes. This is why I decided to write a short script to find examples of periodic orbits of three equal masses, using the Levenberg–Marquardt algorithm on a pseudospectral Fourier grid. In the video I show four of them, but of course you can try generating new ones with the code on GitHub!
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2026/MIB_2026_05/MIB0062_ThreeBodyProblem.py
+
+=================================================================
+
+
