@@ -8,4 +8,12 @@ Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/
 
 =================================================================
 
+Modular forms are complex functions that have a very particular symmetry under the modular group of transformations. They appear in many areas of mathematics, especially in number theory and combinatorics, and even in string theory and quantum gravity. They became especially famous as they were crucial for the proof of Fermat's Last Theorem in 1994 by Andrew Wiles. They are so common that apparently Martin Eichler once said that "There are five fundamental operations in mathematics: addition, subtraction, multiplication, division and modular forms."
+
+Even though the definition of the forms is usually quite simple, plotting them can easily turn into a nightmare. This happens because they are usually defined in terms of infinite series whose value spans across many orders of magnitude in their domain. In order to plot them properly one must make use of their nice set of symmetries to compute them only on their "fundamental domain". The figure shows an example of a modular form, called the normalised Eisenstein series of weight 6. The color hue shows to the phase of the function, while each brightness contour corresponds to an order of magnitude in its modulus.
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2026/MIB_2026_05/MIB0063_ModularForms.py
+
+=================================================================
+
 
