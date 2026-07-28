@@ -1,0 +1,11 @@
+=================================================================
+
+Lyapunov fractals appear when studying the ergions of stability and chaotic behavior of a generalized logistic map x --> r * x * (1 - x), where each iteration has a different growth rate r. Specifically, r alternates between two values a and b periodically, following a repeating sequence. These fractals were published in 1990 by Mario Markus, and then appeared in a popular article in Scientific American by A. K. Dewdney in 1991.
+
+The plot shows the value of the Lyapunov exponent for values of a between 2.5 and 3.4 (vertical axis) and values of b between 3.1 and 4 (horizontal axis), for the sequence BBBBBBAAAAAA. Red-yellow colors are negative exponents (stable regions), and purple-black colors for positive exponents (chaotic regions). Ths region of the fractal is popularly known as Zircon Zity.
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2026/MIB_2026_07/MIB0064_LyapunovFractal.py
+
+=================================================================
+
+
