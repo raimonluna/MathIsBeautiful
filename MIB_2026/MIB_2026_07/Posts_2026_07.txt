@@ -8,4 +8,12 @@ Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/
 
 =================================================================
 
+The Klein bottle is a one-sided closed mathematical surface, that has no inside or outside, what mathematicians like to call a non-orientable surface. It was first described in 1882 by Felix Klein, and it is one of the most famous objects in topology and differential geometry. As a topologically defined object, there are many possible deformations of this surface. This particular bottle-like parametrization was created, as far as I know, by Hagen Wierstorf in a Gnuplot tutorial.
+
+All of its parametrizations, however, have to self-intersect when immersed in three-dimensional space. It can be embedded without self-intersections in four-dimensional Euclidean space though. If we think of the fourth dimension as time, we can make parts of it appear and disappear at different times like the Cheshire Cat, thus dodging the crossings. This Alice in Wonderland reference is what motivated my choice of colors for the bottle. The chessboard was a really nice suggestion by @pedro_tarancon_.
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2026/MIB_2026_07/MIB0065_KleinBottle.py
+
+=================================================================
+
 
