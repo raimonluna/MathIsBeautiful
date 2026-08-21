@@ -1,0 +1,12 @@
+=================================================================
+
+People who know me well are quite aware that my level of happiness strongly depends on the distance to the mountains. This is why I think now is a good moment to share this animation from the heights. This sequence was published in 2016 by Rémy Sigrist (OEIS A279125), and was featured on a Numberphile YouTube video featuring Neil Sloane. 
+
+The definition of the sequence is quite bizarre. No pair of terms a(n) and a(m) can be the same if the binary representations of n and m share a number 1. In other words, if a(n) = a(m) then (n & m) = 0 bitwise. Given this condition, each term has to be the lowest available integer. The first terms are 0, 0, 1, 0, 2, 3, 4, 0, 3, 2, 5... 
+
+The funny thing is that the plot of the sequence has a self-similar structure that really looks like a snowy mountain range. To make it more interesting, I added a small tail to each data point, and some drifting Perlin noise on the background that makes it look like a really scary alpine peak.
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2026/MIB_2026_08/MIB0066_RemySigrist.py
+
+=================================================================
+

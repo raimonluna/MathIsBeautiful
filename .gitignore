@@ -12,6 +12,9 @@ Output
 *.synctex.gz
 *.toc
 
+misc/mb-data.html
+website
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
