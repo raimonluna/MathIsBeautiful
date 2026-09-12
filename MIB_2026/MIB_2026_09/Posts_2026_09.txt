@@ -1,0 +1,10 @@
+=================================================================
+
+For the six-seventh publication of this channel, I have chosen something which is not quite a mathematical concept, but it has a lot of mathematics behind it. The Strandbeest, Dutch for "beach beasts" are a really wonderful creation by the kinetic sculptor Theo Jansen @theojansen_official. These are huge mechanical sculptures resembling animals that walk across the beaches using only wind power. They are made entirely of simple materials such as PVC pipes, wood, cloth and zip ties.
+
+These animals do not use wheels to move around. Instead, they have a system of mechanical legs that allow them to walk in a very natural way. These legs use a very interesting linkage of straight rods, which is actually known as Jansen's linkage. This creates a mesmerizing mechanical device that is powered by a central rotating crankshaft. To design this system Jansen used an evolutionary algorithm back in 1990 to calculate the specific set of precise link lengths, often called the "holy numbers". The animation above shows a pair of such legs, which are solved by plain circle intersection via Newton-Raphson iteration.
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2026/MIB_2026_09/MIB0067_Strandbeest.py
+
+=================================================================
+
