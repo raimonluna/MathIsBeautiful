@@ -25,15 +25,12 @@ points  = np.vstack([radius * np.cos(theta), radius * np.sin(theta), 0 * theta, 
 points += 10 * (1 - 2 * np.random.rand(init_part, 4))
 
 def insert_points(points, max_dist):
-    dists = np.sum((points - np.roll(points, 1, axis = 0))**2, axis = 1)**0.5
-    if (dists > max_dist).any():   
-        chunks  = np.split(points, np.where(dists > max_dist)[0])[int(dists[0] > max_dist):]
-        new_points = [chunks[0]]
-        for chunk in chunks[1:]: # Any cool way to vectorize this?
-            new_points += [(new_points[-1][[-1],:] + chunk[[0],:]) / 2, chunk]
-        if dists[0] > max_dist:
-            new_points += [(new_points[-1][[-1],:] + new_points[0][[0],:]) / 2]
-        return np.vstack(new_points)
+    prev_points = np.roll(points, 1, axis=0)
+    dists       = np.sum((points - prev_points)**2, axis=1)**0.5
+    idx         = np.where(dists > max_dist)[0]
+    if idx.size > 0:
+        new_pts = (points[idx] + prev_points[idx]) / 2
+        points = np.insert(points, idx, new_pts, axis=0)
     return points
 
 def compute_forces(points):
