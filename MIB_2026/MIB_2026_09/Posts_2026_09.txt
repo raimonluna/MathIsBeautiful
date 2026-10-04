@@ -8,11 +8,11 @@ Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/
 
 =================================================================
 
-This one is for my forest friends @xavierrodenasmayor and @guillemdemnl: the Pithagoras tree! This is a fractal built from repeatedly applying the Pythagorean theorem. Starting from an initial square, the trunk, we stack two more squares, the first branches, enclosing a right triangle. We keep repeating this procedure many times, maintaining the same proportion, to form smaller branches and laves.
+This one is for my forest friends @xavierrodenasmayor and @guillemdemnl: the Pythagoras tree! This is a fractal built from repeatedly applying the Pythagorean theorem. Starting from an initial square, the trunk, we stack two more squares, the first branches, enclosing a right triangle. We keep repeating this procedure many times, maintaining the same proportion, to form smaller branches and laves.
 
 The Pythagorean theorem tells us that every mother branch has exactly the same area as the sum of its two daughter branches, which makes this fractal especially beautiful. By varying the angle, we can make the trees rock with the wind. The inscribed angle theorem was very useful to build this code in a compact way. This fractal was initially invented in 1942 by the Dutch mathematics teacher Albert E. Bosman.
 
-Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2026/MIB_2026_09/MIB0068_PithagorasTree.py
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2026/MIB_2026_09/MIB0068_PythagorasTree.py
 
 =================================================================
 

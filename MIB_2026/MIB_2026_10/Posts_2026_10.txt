@@ -1,0 +1,10 @@
+=================================================================
+
+Lissajous curves appear whenever something oscillates in two perpendicular directions, with different frequencies. If the two frequencies are mutually commensurate, i.e., their ratio is a simple rational number such as 5/4 or 2/3, the curve will be closed and quite nice. These curves were studied in the 19th century by Nathaniel Bowditch and Jules Antoine Lissajous. You can find many animations like this one online, but I guess I had to make it anyway.
+
+The red dots at the left and top edges of the image rotate around the orange circles with frequencies of 1 to 7. Their x and y coordinates are then crossed in the figures in between, creating all kinds of funny shapes. These shapes are sometimes generated in science museums and exhibitions using pendulums and sand. They also appear in many company logos, art works and even in Alfred Hitchcock's movie Vertigo.
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2026/MIB_2026_10/MIB0069_LissajousCurves.py
+
+=================================================================
+

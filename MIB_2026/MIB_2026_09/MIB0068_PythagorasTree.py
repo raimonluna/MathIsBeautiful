@@ -37,4 +37,4 @@ def animate(i):
     return fig
 
 animation_fig = animation.FuncAnimation(fig, animate, frames = frames, interval = 50)
-animation_fig.save("MIB0068_PithagorasTree.mp4", dpi = 200)
+animation_fig.save("MIB0068_PythagorasTree.mp4", dpi = 200)
