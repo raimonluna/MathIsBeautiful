@@ -1,0 +1,10 @@
+=================================================================
+
+Winter is coming to the field of mathematics, so here goes an implementation of Reiter's snowflake. This is a cool model that combines features from both cellular automata and diffusion-limited aggregation, featured in previous posts of this channel.
+
+This model was introduced in 2004 by Clifford A. Reiter, and it is essentially a cellular automaton on a hexagonal grid. Each cell can be frozen or not frozen, and contains some amount of water in it. The unfrozen vapor diffuses towards the snowflake, while the frozen water keeps its place fixed.
+
+Do it yourself! Source code: https://github.com/raimonluna/MathIsBeautiful/blob/main/MIB_2026/MIB_2026_11/MIB0070_ReiterSnowflake.py
+
+=================================================================
+

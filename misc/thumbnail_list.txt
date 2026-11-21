@@ -28,3 +28,6 @@
 00:00:00 MIB0065_KleinBottle.mp4
 00:00:00 MIB0066_RemySigrist.mp4
 00:00:00 MIB0067_Strandbeest.mp4
+00:00:00 MIB0068_PythagorasTree.mp4
+00:00:10 MIB0069_LissajousCurves.mp4
+00:00:45 MIB0070_ReiterSnowflake.mp4

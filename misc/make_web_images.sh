@@ -16,7 +16,7 @@ for f in "$in_path"/Images/MIB006*.png; do
 done
 
 # Compress the movies (with size check fallback)
-for f in "$in_path"/Movies/MIB0060*.mp4; do
+for f in "$in_path"/Movies/MIB006*.mp4; do
     [ -e "$f" ] || continue
     filename=$(basename "$f")
     
